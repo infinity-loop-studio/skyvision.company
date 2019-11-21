@@ -6,6 +6,9 @@ module.exports = {
     if (req.headers.host === 'skyvision.company' && md.mobile() !== null) {
       return res.redirect('https://m.skyvision.company');
     }
+    if (req.headers.host === 'm.skyvision.company' && md.mobile() === null) {
+      return res.redirect('https://skyvision.company');
+    }
     let menuItem = await MenuItems.findOne({
       systemName: 'главная'
     });
