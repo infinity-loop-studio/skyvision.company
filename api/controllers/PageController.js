@@ -20,10 +20,10 @@ module.exports = {
     var MobileDetect = require('mobile-detect');
     var md = new MobileDetect(req.headers['user-agent']);
     if (req.headers.host === 'skyvision.company' && md.mobile() !== null) {
-      return res.redirect('https://m.skyvision.company');
+      return res.redirect('https://m.skyvision.company/' + req.param('language') + '/' + req.param('param1'));
     }
     if (req.headers.host === 'm.skyvision.company' && md.mobile() === null) {
-      return res.redirect('https://skyvision.company');
+      return res.redirect('https://skyvision.company/' + req.param('language') + '/' + req.param('param1'));
     }
     let menuItem = await MenuItems.findOne({
       systemName: req.param('param1')
