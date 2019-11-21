@@ -11,7 +11,7 @@ module.exports = {
     let menuItem = await MenuItems.findOne({
       systemName: 'главная'
     });
-    let positions = await sails.helpers.getModules.with({menuItemId: menuItem.id});
+    let positions = await sails.helpers.getModules.with({menuItemId: menuItem.id, req: req});
     return res.view('template/il_skyvision', {
       positions: positions
     });
