@@ -3,8 +3,9 @@ module.exports = {
     var
       MobileDetect = require('mobile-detect'),
       md = new MobileDetect(req.headers['user-agent']);
-    console.log(req.headers.host);
-    console.log( md.mobile() );
+    if (req.headers.host === 'skyvision.company' && md.mobile() !== null) {
+    console.log("is mobile")
+    }
     let menuItem = await MenuItems.findOne({
       systemName: 'главная'
     });
