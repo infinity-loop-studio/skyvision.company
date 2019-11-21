@@ -4,7 +4,7 @@ module.exports = {
       MobileDetect = require('mobile-detect'),
       md = new MobileDetect(req.headers['user-agent']);
     if (req.headers.host === 'skyvision.company' && md.mobile() !== null) {
-      return res.redirect('https://gtop.com.ua');
+      return res.redirect('https://m.skyvision.company');
     }
     let menuItem = await MenuItems.findOne({
       systemName: 'главная'
