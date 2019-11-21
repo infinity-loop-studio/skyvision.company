@@ -19,7 +19,7 @@ module.exports = {
       systemName: 'главная'
     });
     let positions = await sails.helpers.getModules.with({menuItemId: menuItem.id, req: req});
-    return res.view('template/il_skyvision', {
+    return res.view(template, {
       positions: positions
     });
   },
