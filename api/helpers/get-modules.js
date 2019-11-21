@@ -5,6 +5,10 @@ module.exports = {
     menuItemId: {
       type: 'number',
       required: true
+    },
+    req: {
+      type: 'ref',
+      required: true
     }
   },
   exits: {
@@ -15,7 +19,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
     var MobileDetect = require('mobile-detect');
-    var md = new MobileDetect(req.headers['user-agent']);
+    var md = new MobileDetect(inputs.req.headers['user-agent']);
     var device = [];
     if (md.mobile() !== null) {
       device = [2, 3];
