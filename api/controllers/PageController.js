@@ -1,8 +1,7 @@
 module.exports = {
   mainpage: async (req, res) => {
-    var
-      MobileDetect = require('mobile-detect'),
-      md = new MobileDetect(req.headers['user-agent']);
+    var MobileDetect = require('mobile-detect');
+    var md = new MobileDetect(req.headers['user-agent']);
     if (req.headers.host === 'skyvision.company' && md.mobile() !== null) {
       return res.redirect('https://m.skyvision.company');
     }
@@ -18,6 +17,14 @@ module.exports = {
     });
   },
   oneParam: async (req, res) => {
+    var MobileDetect = require('mobile-detect');
+    var md = new MobileDetect(req.headers['user-agent']);
+    if (req.headers.host === 'skyvision.company' && md.mobile() !== null) {
+      return res.redirect('https://m.skyvision.company');
+    }
+    if (req.headers.host === 'm.skyvision.company' && md.mobile() === null) {
+      return res.redirect('https://skyvision.company');
+    }
     let menuItem = await MenuItems.findOne({
       systemName: req.param('param1')
     });
