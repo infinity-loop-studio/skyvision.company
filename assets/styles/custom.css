@@ -1,0 +1,133 @@
+#mainmenu a {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#mainmenu span {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#mainslideshow h1 {
+  color: #ffc30e;
+}
+
+#homepage-about-us-section h1 {
+  color: #ffc30e;
+}
+
+#homepage-reviews-container-section h2 {
+  color: #ffc30e;
+}
+
+.page-header {
+  color: #ffc30e !important;
+}
+
+.header-separator {
+  color: #e74d3d;
+}
+
+#mainslideshow .uk-slideshow-nav li {
+  padding: 10px 0;
+}
+
+#homepage-services-section {
+  padding: 40px 0;
+}
+
+#homepage-services-section img {
+  border: 1px solid #cccccc;
+}
+
+#homepage-services-section a {
+  background-color: rgb(255, 197, 0);
+  color: #70594a;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+#homepage-services-section a:hover {
+  background-color: #d2a300;
+  color: #fff;
+}
+
+.custom-overlay-1 {
+  background: rgba(114, 92, 76, 0.95);
+}
+
+#homepage-article-section {
+  background-color: #725c4c;
+}
+
+#homepage-article-section .image-television {
+  background: url(/images/mainpage/articles/television.jpg) 75%;
+}
+
+#homepage-article-section .image-internet {
+  background: url(/images/mainpage/articles/internet.jpg) 75%;
+}
+
+#homepage-article-section .image-monitoring {
+  background: url(/images/mainpage/articles/monitoring.jpg) 75%;
+}
+
+#homepage-about-us-section {
+  position: relative;
+  background-image: url(/images/parallax-background.webp);
+  margin: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 130px 0;
+}
+
+#homepage-reviews-container-section {
+  position: relative;
+  background-image: url(/images/parallax-background.webp);
+  margin: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#televisionpage-header-section {
+  position: relative;
+  background-image: url(/images/parallax-background.webp);
+  margin: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 70px 0;
+}
+
+.uk-article a.uk-button {
+  background-color: rgb(255, 197, 0);
+  color: #70594a;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.uk-article a.uk-button:hover {
+  background-color: #d2a300;
+  color: #fff;
+}
+
+.uk-article h2 {
+  font-size: 1.5rem;
+}
+
+.uk-description-list > dt {
+  color: #e74d3d !important;
+  font-size: 0.875rem;
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+.uk-alert-danger a {
+  color: #333333 !important;
+}
