@@ -14,6 +14,15 @@ module.exports = {
   },
 
   fn: async function (inputs, exits) {
+    var MobileDetect = require('mobile-detect');
+    var md = new MobileDetect(req.headers['user-agent']);
+    var device = [];
+    if (md.mobile() !== null) {
+      device = [2, 3];
+    }
+    if (md.mobile() === null) {
+      device = [1, 3];
+    }
     var modulesId = [];
     var positions = [];
     let parsedModule;
@@ -24,7 +33,8 @@ module.exports = {
       modulesId.push(module.moduleId);
     }
     modulesData = await Modules.find({
-      id: modulesId
+      id: modulesId,
+      device: device
     });
     for (const moduleData of modulesData) {
       switch (moduleData.systemName) {

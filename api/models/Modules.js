@@ -8,6 +8,9 @@ module.exports = {
     },
     params: {
       type: 'json'
+    },
+    device: {
+      type: 'number'
     }
   }
 };
