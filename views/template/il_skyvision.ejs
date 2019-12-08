@@ -1,2 +1,53 @@
-<!DOCTYPE html><html><head><title>Title</title><meta charset="utf-8"><meta content="width=device-width,initial-scale=1"name="viewport"><link href="/styles/custom.css"rel="stylesheet"><link href="/styles/uikit.css"rel="stylesheet"></head><body><div class="uk-background-secondary uk-position-absolute uk-position-fixed"style="width:250px"uk-height-viewport><a href="/"><img class="uk-padding-small"src="/images/logo.webp"></a><%-positions.mainmenu%></div><div class="uk-background-primary"style="margin-left:250px"><%- positions.header %><% if (positions.article) { %><div class="uk-background-default uk-margin-remove uk-padding"uk-grid><article class="uk-article uk-first-column uk-padding-remove-left uk-width-expand@l"><%- positions.article %></article><% if (positions.sidebarright) { %><div class="uk-width-1-3@l"><%- positions.sidebarright %></div><% } %></div><% } %><% if (positions.section1){for (var i = 0; i < positions.section1.length; i++ ){ %><%- positions.section1[i] %><% }} %><div class="uk-background-default uk-grid-match uk-margin-remove-top uk-padding-small uk-position-relative"><div><p class="uk-text-center">© Copyright Skyvision company | Сайт сделан в <a href="http://theme-fusion.com"rel="noopener noreferrer"target="_blank">InfinityLoop studio</a></p></div></div></div><script src="/js/uikit.js"></script><script src="/js/fontawesome/all.min.js"></script><script async>let slideshow = document.getElementById('mainslideshow');
-  slideshow.style.width = window.screen.width - (window.innerWidth - document.body.clientWidth) - 250 + 'px';</script><%- positions.javascript %></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/custom.css">
+    <link rel="stylesheet" href="/styles/uikit.css">
+</head>
+<body>
+<!--Sidebar left (logo & main menu)-->
+<div uk-height-viewport class="uk-position-fixed uk-background-secondary uk-position-absolute" style="width: 250px">
+    <a href="/"><img class="uk-padding-small" src="/images/logo.webp"></a>
+    <%-positions.mainmenu%>
+</div>
+<div style="margin-left: 250px" class="uk-background-primary">
+    <%- positions.header %>
+
+    <% if (positions.article) { %>
+        <div uk-grid class="uk-background-default uk-margin-remove uk-padding">
+            <article class="uk-width-expand@l uk-first-column uk-padding-remove-left uk-article">
+                <%- positions.article %>
+            </article>
+            <% if (positions.sidebarright) { %>
+                <div class="uk-width-1-3@l">
+                    <%- positions.sidebarright %>
+                </div>
+            <% } %>
+        </div>
+    <% } %>
+
+    <% if (positions.section1){for (var i = 0; i < positions.section1.length; i++ ){ %>
+        <%- positions.section1[i] %>
+    <% }} %>
+
+    <div class="uk-margin-remove-top uk-grid-match uk-position-relative uk-background-default uk-padding-small">
+        <div>
+            <p class="uk-text-center"> © Copyright Skyvision company | Сайт сделан в <a href="http://theme-fusion.com" target="_blank" rel="noopener noreferrer"> InfinityLoop
+                    studio
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="/js/uikit.js"></script>
+<script src="/js/fontawesome/all.min.js"></script>
+<script async>
+  let slideshow = document.getElementById('mainslideshow');
+  slideshow.style.width = window.screen.width - (window.innerWidth - document.body.clientWidth) - 250 + 'px';
+</script>
+<%- positions.javascript %>
+</body>
+</html>

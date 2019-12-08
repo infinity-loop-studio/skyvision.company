@@ -99,10 +99,11 @@
   position: relative;
   background-image: url(/images/parallax-background.webp);
   margin: 0;
-  background-position: center center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 70px 0;
+  background-size: cover;
 }
 
 .uk-article a.uk-button {
@@ -130,4 +131,8 @@
 
 .uk-alert-danger a {
   color: #333333 !important;
+}
+
+.red-color {
+  color: #e74d3d;
 }
