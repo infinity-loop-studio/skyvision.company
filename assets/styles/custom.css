@@ -136,3 +136,7 @@
 .red-color {
   color: #e74d3d;
 }
+
+.text-underline {
+  text-decoration: underline;
+}
