@@ -11,6 +11,10 @@ module.exports = {
     },
     device: {
       type: 'number'
+    },
+    enabled:{
+      type: 'boolean',
+      defaultsTo: true
     }
   }
 };

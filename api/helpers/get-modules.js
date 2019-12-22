@@ -38,7 +38,8 @@ module.exports = {
     }
     modulesData = await Modules.find({
       id: modulesId,
-      device: device
+      device: device,
+      enabled: true
     });
     for (const moduleData of modulesData) {
       switch (moduleData.systemName) {
