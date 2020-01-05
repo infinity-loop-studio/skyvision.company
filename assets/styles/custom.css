@@ -140,3 +140,25 @@
 .text-underline {
   text-decoration: underline;
 }
+
+.plans {
+  border-left: 5px solid #60463d;
+  padding-left: 15px;
+}
+
+.channel-list {
+  border-left: 5px solid #ffca02;
+  padding-left: 15px;
+}
+
+.uk-accordion-title {
+  font-size: unset !important;
+}
+
+.light-gray-text {
+  color: #e6e6e6;
+}
+
+dt {
+  font-weight: normal !important;
+}
