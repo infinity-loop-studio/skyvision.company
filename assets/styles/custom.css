@@ -148,7 +148,6 @@
 
 .channel-list {
   border-left: 5px solid #ffca02;
-  padding-left: 15px;
 }
 
 .uk-accordion-title {
@@ -161,4 +160,9 @@
 
 dt {
   font-weight: normal !important;
+}
+
+.uk-accordion-title::before {
+  float: left !important;
+  margin-right: 10px;
 }
