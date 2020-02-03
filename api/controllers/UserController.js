@@ -44,7 +44,7 @@ module.exports = {
 
   },
   sendfile: async (req, res) => {
-    console.log(require('path').resolve(sails.config.appPath, 'assets/images')T);
+    console.log(require('path').resolve(sails.config.appPath, 'assets/images'));
     req.file('avatar').upload({
       dirname: require('path').resolve(sails.config.appPath, 'assets/images')
     },function (err, uploadedFiles) {
