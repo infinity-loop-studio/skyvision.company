@@ -166,3 +166,18 @@ dt {
   float: left !important;
   margin-right: 10px;
 }
+
+.channels-list div {
+  padding: 10px;
+  flex: 0 1 calc(10% - 21px);
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+
+.channels-list {
+  border-top: 1px solid #e5e5e5;
+}
+
+.channels-list div img {
+  width: 100%;
+}

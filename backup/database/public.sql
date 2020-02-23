@@ -1,4 +1,535 @@
-<ul uk-accordion>
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : GCP (postgresql)
+ Source Server Type    : PostgreSQL
+ Source Server Version : 90615
+ Source Host           : 35.228.30.210:5432
+ Source Catalog        : skyvision.company
+ Source Schema         : public
+
+ Target Server Type    : PostgreSQL
+ Target Server Version : 90615
+ File Encoding         : 65001
+
+ Date: 07/02/2020 22:05:45
+*/
+
+
+-- ----------------------------
+-- Sequence structure for archive_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."archive_id_seq";
+CREATE SEQUENCE "public"."archive_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for customhtml_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."customhtml_id_seq";
+CREATE SEQUENCE "public"."customhtml_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for customjs_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."customjs_id_seq";
+CREATE SEQUENCE "public"."customjs_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for languages_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."languages_id_seq";
+CREATE SEQUENCE "public"."languages_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for menu_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."menu_id_seq";
+CREATE SEQUENCE "public"."menu_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for menuitems_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."menuitems_id_seq";
+CREATE SEQUENCE "public"."menuitems_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for modules_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."modules_id_seq";
+CREATE SEQUENCE "public"."modules_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for modulestable_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."modulestable_id_seq";
+CREATE SEQUENCE "public"."modulestable_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for slides_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."slides_id_seq";
+CREATE SEQUENCE "public"."slides_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for users_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."users_id_seq";
+CREATE SEQUENCE "public"."users_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Table structure for archive
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."archive";
+CREATE TABLE "public"."archive" (
+  "id" int4 NOT NULL DEFAULT nextval('archive_id_seq'::regclass),
+  "createdAt" int8,
+  "fromModel" text COLLATE "pg_catalog"."default",
+  "originalRecord" json,
+  "originalRecordId" json
+)
+;
+
+-- ----------------------------
+-- Records of archive
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for customhtml
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."customhtml";
+CREATE TABLE "public"."customhtml" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('customhtml_id_seq'::regclass),
+  "data" text COLLATE "pg_catalog"."default",
+  "moduleId" float4
+)
+;
+
+-- ----------------------------
+-- Records of customhtml
+-- ----------------------------
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 1, '<div id="homepage-services-section" class="uk-margin-remove uk-position-relative uk-background-default">
+  <h1 class="uk-text-center">Услуги</h1>
+  <p class="uk-text-center">Весь ассортимент нашей компании</p>
+  <div uk-grid="" class="uk-child-width-1-3@l uk-child-width-1-1@s uk-child-width-1-2@m uk-grid uk-padding uk-grid">
+    <div class="uk-first-column">
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img class="border-c" src="/images/mainpage/services/television.jpg" alt="">
+            <div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body ukcardf">
+          <h3 class="uk-card-title">Телевидение</h3>
+          <p>Установка спутникового, эфирного и IPTV телевидения.</p>
+          <a href="/ru/телевидение" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img class="border-c" src="/images/mainpage/services/internet.jpg" alt="">
+            <div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title">Интерент</h3>
+          <p>Установка качественного спутникового интернета под ключ.</p>
+          <a href="/ru/интернет" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img class="border-c" src="/images/mainpage/services/monitoring.jpg" alt="">
+            <div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title">Видео наблюдение</h3>
+          <p>Монтаж и настройка систем видео наблюдения.</p>
+          <a href="/ru/видеонаблюдение" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-grid-margin uk-first-column">
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img class="border-c" src="/images/mainpage/services/intercom.jpg" alt="">
+            <div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title">Домофонные системы</h3>
+          <p>Установка домофонной системы, дома и на предриятии.</p>
+          <a href="/ru/домофонные-системы" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-grid-margin">
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img class="border-c" src="/images/mainpage/services/amplifier.jpg" alt="">
+            <div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title">Усиление 3G, 4G и GSM</h3>
+          <p>Усиление сигнала мобильного опреатора.</p>
+          <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-grid-margin">
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <img class="border-c" src="/images/mainpage/services/pc.jpg" alt="">
+            <div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title">Обслуживание ПК</h3>
+          <p>Настройка и обслуживание любой компьютерной техники.</p>
+          <a href="/ru/корпоративное-компьютерное-обслуживание" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>', 5);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 2, '<div id="homepage-article-section" class="uk-light uk-child-width-1-2@l uk-child-width-1-1@s uk-grid-match uk-grid-column-collapse uk-position-relative uk-background-default uk-grid" uk-grid="">
+  <div class="background-primary uk-padding-large uk-height-large uk-first-column">
+    <p class="uk-text-lead">
+      Вся подробная информация о том как происходит подключение к спутниковому телевидению.
+    </p>
+    <p>
+      <a href="/ru/подключение-и-настройка-спутникового-телевидения" class="uk-button uk-button-default">Подробнее</a>
+    </p>
+  </div>
+  <div class="image-television">
+  </div>
+  <div class="image-internet uk-margin-remove uk-grid-margin uk-first-column">
+  </div>
+  <div class="background-primary uk-padding-large uk-height-large uk-margin-remove uk-grid-margin">
+    <p class="uk-text-lead">
+      Вся подробная информация о том что нужно знать при подключении спутникового интернета.
+    </p>
+    <p>
+      <a href="/ru/подключение-и-настройка-спутникового-интернета" class="uk-button uk-button-default">Подробнее</a>
+    </p>
+  </div>
+  <div class="background-primary uk-padding-large uk-height-large uk-margin-remove uk-grid-margin uk-first-column">
+    <p class="uk-text-lead">
+      Монтаж и настройка систем видеонаблюдения во всех подробностях.
+    </p>
+    <p>
+      <a href="/ru/проектирование-и-монтаж-систем-видеонаблюдения" class="uk-button uk-button-default">Подробнее</a>
+    </p>
+  </div>
+  <div class="image-monitoring uk-margin-remove uk-grid-margin">
+  </div>
+</div>', 6);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 3, '<div id="homepage-quick-order-section" class="uk-margin-remove uk-position-relative uk-background-default uk-visible@l">
+  <div class="uk-padding">
+    <div class="uk-container uk-container-expand">
+      <div uk-grid="" class="uk-grid">
+        <div class="uk-width-1-2@l uk-first-column">
+          <img src="/images/mainpage/quick_order/image_1.webp">
+        </div>
+        <div class="uk-width-1-2@l">
+          <h1>
+            Быстро<br>
+            заказать услугу
+          </h1>
+          <p>
+            Этот раздел позволяет быстро и удобно выбрать услуги которые мы предоставляем. Вы можете
+            отметить интересующие вас услуги и указать свой номер телефона и мы
+            вам перезвоним в удобное для вас время для более подробной консультации.
+          </p>
+          <form>
+            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+              <label><input class="uk-checkbox" type="checkbox"> Телевидение</label>
+              <label><input class="uk-checkbox" type="checkbox"> Интернет</label>
+              <label><input class="uk-checkbox" type="checkbox"> Видеонаблюдение</label>
+              <label><input class="uk-checkbox" type="checkbox"> Дополнительные услуги</label>
+            </div>
+            <div>
+              <div uk-grid="" class="uk-grid-collapse uk-grid">
+                <div class="uk-width-2-3@l uk-first-column">
+                  <input class="uk-input" type="text" placeholder="Введите свой номер телефона">
+                </div>
+                <div class="uk-width-1-3@l">
+                  <button class="uk-button uk-button-danger">Отправить</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>', 7);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 4, '<div id="homepage-about-us-section" uk-grid="" class="uk-grid uk-grid-stack uk-light uk-visible@l">
+    <div class="uk-width-1-1@l uk-padding uk-first-column">
+        <h1>Наша цель</h1>
+        <p>Доступные цены и высокое качество</p>
+        <p>Главным критерием хорошей и качествнной работы на наш взгляд, это любовь к собственному делу. Будучи
+            энтузиастами и профессионалами своего дела мы предоставляем
+            нашим клиентам, максимальный уровень качества и обслуживания.</p>
+    </div>
+</div>', 8);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 5, '<div id="homepage-send-review-section" class="uk-margin-remove uk-position-relative uk-background-default">
+  <div uk-grid="" class="uk-child-width-1-3@l uk-child-width-1-1@s uk-padding uk-grid">
+    <div class="uk-first-column">
+      <img src="/images/mainpage/review/image_1.webp">
+    </div>
+    <div class="uk-width-2-3@l">
+      <h1>
+        Оставить отзыв
+      </h1>
+      <p>Мы всегда рады стороннему мнению и конструктивной критике. В этой форме вы всегда можете опубликовать ваш
+        комментарий.</p>
+      <form>
+        <div class="uk-margin">
+          <textarea class="uk-textarea" rows="3" placeholder="Введите своё сообщение"></textarea>
+        </div>
+        <button class="uk-button uk-button-secondary">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>', 9);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 6, '<div id="homepage-reviews-container-section" uk-grid="" class="uk-grid uk-grid-stack uk-grid-small">
+  <div class="uk-width-1-1@l uk-first-column">
+    <div uk-slideshow="animation: slide; autoplay: false; autoplay-interval: 5000" class="uk-slideshow">
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+        <ul class="uk-slideshow-items" style="min-height: 651.375px;">
+          <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px);">
+            <div class="uk-position-center uk-position-small uk-text-center uk-light"><h2 class="uk-margin-remove">Щербаков Станислав</h2>
+              <p class="uk-margin-remove">Очень важно было поставить две камеры на предприятии для обзора термодатчиков холодильников. Очень быстро и качественно выполнили подключение и
+                настроили
+                нам мобильники в течении дня.</p></div>
+          </li>
+          <li tabindex="-1">
+            <div class="uk-position-center uk-position-small uk-text-center uk-light"><h2 class="uk-margin-remove">Center</h2>
+              <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>', 10);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 50, ' ', 54);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 51, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Контакты</h1>
+    
+    
+    
+    
+  </div>
+</div>', 55);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 52, ' ', 56);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 7, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Телевидение</h1>
+    <p class="header-separator uk-margin-remove">Подключение и настройка: </p>
+    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
+      <a href="/ru/подключение-и-настройка-спутникового-телевидения">Спутникового телевидения</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">Цифрового эфирного телевидения (Т2)</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">Интернет телевидения (IPTV, OTT)</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/подключение-и-настройка-viasat">Viasat</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/подключение-и-настройка-extra-tv">Extra TV</a>
+    </p>
+    <p class="header-separator uk-margin-remove-bottom">Дополнительные услуги: </p>
+    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
+      <a href="/ru/модернизация-настройка-и-ремонт-спутниковой-антены">Модернизация,настройка и ремонт спутниковой антены</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/ремонт-настройка-и-прошивка-спутниковых-тюнеров-ресиверов">Ремонт, настройка и прошивка спутниковых тюнеров (ресиверов)</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/модернизация-настройка-и-ремонт-оборудования-для-цифрового-эфирного-телевидения-т2">Модернизация, настройка и ремонт оборудования для цифрового эфирного телевидения (Т2)</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/megogo">Megogo</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/oll-tv">OLL TV</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/divan-tv">Divan TV</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/демонтаж-спутниковой-антены">Демонтаж спутниковой антены</a>
+    </p>
+  </div>
+</div>
+', 11);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 8, '<img src="/images/television/articles/article-1.webp">
+<h2 class="uk-margin-small-top">Подключение и настройка спутникового телевидения</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/подключение-и-настройка-спутникового-телевидения" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Подключение и настройка цифрового эфирного телевидения (Т2)</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Подключение и настройка интернет телевидения (IPTV, OTT)</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Подключение и настройка Viasat</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/подключение-и-настройка-viasat" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Подключение и настройка Extra TV</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/подключение-и-настройка-extra-tv" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Дополнительные услуги</h2>
+<p>
+  Список дополнительных услуг
+</p>
+', 12);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 9, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка<br>
+спутникового телевидения</h1>
+    
+    
+    
+    
+  </div>
+</div>', 13);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 10, '<div class="uk-alert-danger uk-text-bold" uk-alert>  <p>В комплектах спутникового ТВ без абонентской платы с 20 января будут не доступны следующие каналы: <a href="#coded_channels" uk-scroll>смотреть список</a></p></div><h2>Цены на комплекты без абонплаты</h2><div class="uk-overflow-auto">  <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">    <thead>    <tr>      <th>Комплект на</th>      <th class="uk-width-small">Цена</th>      <th class="uk-table-shrink uk-text-nowrap"></th>    </tr>    </thead>    <tbody>    <tr>      <td>1 ТВ</td>      <td class="uk-text-truncate">2300 грн.</td>    </tr>    <tr>      <td>2 ТВ</td>      <td class="uk-text-truncate">3300 грн.</td>    </tr>    <tr>      <td>3 ТВ</td>      <td class="uk-text-truncate">4300 грн.</td>    </tr>    <tr>      <td>4 ТВ</td>      <td class="uk-text-truncate">5300 грн.</td>    </tr>    <tr>      <td>5 ТВ</td>      <td class="uk-text-truncate">6300 грн.</td>    </tr>    <tr>      <td>6 ТВ</td>      <td class="uk-text-truncate">7300 грн.</td>    </tr>    <tr>      <td>7 ТВ</td>      <td class="uk-text-truncate">8300 грн.</td>    </tr>    <tr>      <td>8 ТВ</td>      <td class="uk-text-truncate">9300 грн.</td>    </tr>    </tbody>  </table>  <p class="uk-text-meta uk-margin-remove">* Мы работаем с отелями, ресторанами и прочими заведениями где есть потребность в установке более восьми телевизоров.</p></div><h2>Что входит в указанную стоимость</h2><dl class="uk-description-list uk-description-list-divider">  <dt>Выезд мастера</dt>  <dd>После того как вы согласуете все детали вашего подключения по телефону, наш мастер выедет к вам на объект.</dd>  <dt>Оборудование</dt>  <dd>К примеру вы выбрали комплект №4 на четыре телевизора за 5300 грн. В эту сумму будут включены четыре тюнера, параболическая антена, три конвертора на четыре телевизора каждый и 40 метров по 10 метров на каждый телевизор.  </dd>  <dt>Монтаж и настройка</dt>  <dd>Собрав всю необходимую информацию о подключении, наш мастер, со всем необходимым оборудованием для подключения спутникового телевидения, приедет к вам на объект, осуществит    монтаж спутниковой антены и отведёт нужное количество кабеля до каждого телевизора, после чего будет произведена настройка ресиверов.  </dd></dl><h2>Дополнительная информация</h2><h3 id="coded_channels" class="red-color uk-text-bold uk-text-uppercase">Список закодированных каналов</h3><p>1+1 Media («1+1», «2+2», «ТЕТ», «ПлюсПлюс», «Бігуді», «УНІАН ТБ»).</p><p>Медиа Группа Украина (ТРК Украина, НЛО ТВ, Индиго, Эскулап ТВ).</p><p>StarLightMedia (СТБ, ICTV, Новий канал, М1, М2, ОЦЕ).</p><p>Inter Media Group (Интер, НТН, К1, К2, Мега, Пиксель, Zoom, Enter-фильм).</p><p class="uk-text-meta uk-margin-remove">* <span class="red-color">Данные каналы будут платными только в сегменте спутниковго телевидения</span>. В сегменте цифрового эфирного  телевидения эти каналы доступны  бесплатно.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения всех каналов без абонентской платы</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка цифрового эфирного телевидения (DVB-T2)</li>  </a>  <a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">    <li class="uk-padding-small uk-padding-remove-left uk-padding-remove-bottom"><i class="fas fa-external-link-alt"></i> Подключение и настройка комбинированного (спутникового и эфирного DVB-T2) телевидения</li>  </a></ul><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения всех каналов c абонентской платой</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-viasat">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка Viasat</li>  </a>  <a href="/ru/лючение-и-настройка-extra-tv">    <li class="uk-padding-small uk-padding-remove-left"><i class="fas fa-external-link-alt"></i> Подключение и настройка Extra TV</li>  </a>  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">    <li><i class="fas fa-external-link-alt"></i>Подключение и настройка интернет телевидения (IPTV, OTT)</li>  </a></ul>', 14);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 11, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка<br>
+цифрового эфирного телевидения (Т2)</h1>
+    
+    
+    
+    
+  </div>
+</div>', 15);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 12, '<h2>Цены</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ (Пассивная антена + тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-broadcast-tower"></i></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 1650 - 1900 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется пассивная антена для одного телевизора. Растояние между вышкой и антеной должно быть <span  class="red-color uk-text-bold">не больше  20  км</span>. В комплекте идёт 10 метров коаксиального кабеля. Это самое бюджетное решение для одного телевизора.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ (антена с усилителем + тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-broadcast-tower red-color"></i></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 1750 - 2000 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется антена с усилителем для одного телевизора. Растояние между вышкой и антеной должно быть <span  class="red-color uk-text-bold">не  больше  40 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ(пассивная антена + внешний усилитель)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-broadcast-tower"></i> + <span class="red-color">УСИЛИТЕЛЬ</span></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 2150 - 2400 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется пасивная антена с внешним усилителем для одного телевизора. Растояние между вышкой и антеной должно  быть <span class="red-color uk-text-bold">не больше 80 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><table class="uk-table uk-table-hover uk-table-middle uk-table-divider">  <thead>  <tr>    <th>Комплект на</th>    <th class="uk-width-small">Цена</th>    <th class="uk-table-shrink uk-text-nowrap"></th>  </tr>  </thead>  <tbody>  <tr>    <td>2 ТВ</td>    <td class="uk-text-truncate">2800 - 3200 грн.</td>  </tr>  <tr>    <td>3 ТВ</td>    <td class="uk-text-truncate">3700 - 4100 грн.</td>  </tr>  <tr>    <td>4 ТВ</td>    <td class="uk-text-truncate">4500 - 4900 грн.</td>  </tr>  <tr>    <td>5 ТВ</td>    <td class="uk-text-truncate">5300 - 5700 грн.</td>  </tr>  </tbody></table><hr class="uk-divider-icon"><h2>Что входит в указанную стоимость</h2><dl class="uk-description-list uk-description-list-divider">  <dt>Выезд мастера</dt>  <dd>После того как вы согласуете все детали вашего подключения по телефону, наш мастер выедет к вам на объект.</dd>  <dt>Оборудование</dt>  <dd>Комплектация зависит от : 1. Растояния между вышкой и местом монтажа антены, высоты на которой будет размещена антена, окружающей среды и наличия других радио устройств.    Комплект по самой низкой цене является опциональным и применяется в тех местах где уселение не нужно и качество сигнала высокое. В большинстве случаев используется комплектация с усилителем    сигнала.  </dd>  <dt>Монтаж и настройка</dt>  <dd>Собрав всю необходимую информацию о подключении, наш мастер, со всем необходимым оборудованием для подключения эфирного (DVB-T2) телевидения, приедет к вам на объект. После    чего он осуществит монтаж антены и её настройку. Далее монтажник отведёт нужное количество кабеля до места размещения телевизора. Окончательным этапом является подключение    тюнера и его настройка.  </dd></dl><hr class="uk-divider-icon"><h2>Дополнительная информация</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения без абонентской платы</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-спутникового-телевидения">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка спутникового телевидения    </li>  </a>  <p class="uk-text-meta uk-margin-remove">* В данном подключении с 20.01.2020 г. не будет основных украинских каналов</p>  <a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">    <li class="uk-padding-small uk-padding-remove-left uk-padding-remove-bottom"><i class="fas fa-external-link-alt"></i> Подключение и настройка комбинированного (спутникового и      эфирного DVB-T2) телевидения    </li>  </a><span class="red-color">(В классическом DVB-T2 подключении идёт 32 канала в комбинированном идёт 100 каналов)</span></ul><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения всех каналов c абонентской платой</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-viasat">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка Viasat</li>  </a>  <a href="/ru/лючение-и-настройка-extra-tv">    <li class="uk-padding-small uk-padding-remove-left"><i class="fas fa-external-link-alt"></i> Подключение и настройка Extra TV</li>  </a>  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">    <li><i class="fas fa-external-link-alt"></i>Подключение и настройка интернет телевидения (IPTV, OTT)</li>  </a></ul>', 16);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 13, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка<br>
+интернет телевидения (IPTV, OTT)</h1>
+    
+    
+    
+    
+  </div>
+</div>', 17);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 14, '<ul uk-accordion>
   <li><a style=" margin-left: -30px; " class="uk-accordion-title" href="#"><h2 class="uk-margin-remove text-underline">Megogo</h2></a>
     <div class="uk-accordion-content">
       <dl class="uk-description-list uk-description-list-divider">
@@ -7892,3 +8423,2924 @@
     <li class="uk-padding-small uk-padding-remove-left"><i class="fas fa-external-link-alt"></i> Подключение и настройка Extra TV</li>
   </a>
 </ul>
+', 18);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 15, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка<br>
+Viasat</h1>
+    
+    
+    
+    
+  </div>
+</div>', 19);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 16, '<h2>Цены</h2>
+<div class="uk-overflow-auto">
+  <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+    <thead>
+    <tr>
+      <th>Комплект на</th>
+      <th class="uk-width-small">Цена</th>
+      <th class="uk-table-shrink uk-text-nowrap"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1 ТВ</td>
+      <td class="uk-text-truncate">3000 грн.</td>
+    </tr>
+    <tr>
+      <td>2 ТВ</td>
+      <td class="uk-text-truncate">4700 грн.</td>
+    </tr>
+    <tr>
+      <td>3 ТВ</td>
+      <td class="uk-text-truncate">6400 грн.</td>
+    </tr>
+    <tr>
+      <td>4 ТВ</td>
+      <td class="uk-text-truncate">8100 грн.</td>
+    </tr>
+    <tr>
+      <td>5 ТВ</td>
+      <td class="uk-text-truncate">9800 грн.</td>
+    </tr>
+    <tr>
+      <td>6 ТВ</td>
+      <td class="uk-text-truncate">11500 грн.</td>
+    </tr>
+    <tr>
+      <td>7 ТВ</td>
+      <td class="uk-text-truncate">13200 грн.</td>
+    </tr>
+    <tr>
+      <td>8 ТВ</td>
+      <td class="uk-text-truncate">14900 грн.</td>
+    </tr>
+    </tbody>
+  </table>
+  <p class="uk-text-meta uk-margin-remove">* Мы работаем с отелями, ресторанами и прочими заведениями где есть потребность в установке более восьми телевизоров.</p></div>
+
+<dl class="uk-description-list-divider">
+  <dt><h2>Тарифные планы</h2></dt>
+  <div class="plans">
+    <dd class="uk-margin-small-top">
+      <i class="fas fa-list"></i> Тарифный план: Национальный <span class="red-color">|</span> Цена: 89 грн./мес
+    </dd>
+    <dd class="uk-margin-small-top">
+      <i class="fas fa-list"></i> Тарифный план: Семейный <span class="red-color">|</span> Цена: 109 грн./мес
+    </dd>
+    <dd class="uk-margin-small-top">
+      <i class="fas fa-list"></i> Тарифный план: Престижный <span class="red-color">|</span> Цена: 149 грн./мес
+    </dd>
+    <dd class="uk-margin-small-top">
+      <i class="fas fa-list"></i> Тарифный план: Престижный HD <span class="red-color">|</span> Цена: 249 грн./мес
+    </dd>
+    <dd class="uk-margin-small-top">
+      <i class="fas fa-list"></i> Тарифный план: Премиум HD <span class="red-color">|</span> Цена: 299 грн./мес
+    </dd>
+  </div>
+</dl>
+<dl class="uk-description-list uk-description-list-divider channel-list">
+  <ul uk-accordion="" class="uk-accordion">
+    <li>
+      <a class="uk-accordion-title" href="#">
+        <dt>
+          <i class="fas fa-tv"></i> Список каналов тарифного плана "Национальный"
+        </dt>
+      </a>
+      <div class="uk-accordion-content" hidden="" aria-hidden="true">
+        <dd class="uk-margin-small-top">
+          <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+
+            <!--Спорт-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Спорт</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-3@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/XSPORT1.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Новости-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Новости</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/a096d832e7eaac5985ad86bea151aa5d.png" alt="УНІАН"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/112.png" alt="112"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/espresso-tv.png" alt="Еспресо ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/zik_logo_versiya2.jpg" alt="ZIK"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/pravda_tut_logo1.png" alt="ПравдаТУТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1delovoy.png" alt="Перший діловий"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/HROMADSKE-UA-logo_180_35.png" alt="Hromadske.ua"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4Channel_logo_300_300.png" alt="4 канал"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo_5tv_01.png" alt="5 канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/24_novosti.png" alt="24"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/cb021b7ec416133cb320b1b2d87336aa.png" alt="Прямий"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/News_one.png" alt="NEWS ONE"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/7a02e0ba08e360cdddae09fe6925fb81.png" alt="Rabinovich TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4bba5d06f002cb076db58518cb46e34f.png" alt="ЧП.Info"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/UA_TV.png" alt="UA | TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nastoyaschee_vremya_logo1.png" alt="Настоящее Время"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/tv5-monde.png" alt="TV 5 Monde"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/dw.png" alt="DW (en)"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/36cd166d7d57bca52ef3a8d49af53a60.png" alt="DW (de)"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_euronews_174.jpg" alt="Euronews"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Bloomberg_Television_stack_blk.png" alt="Bloomberg TV"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Позноваетльные-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Позноваетльные</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/english-club-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Mega-logo.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Кино-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Кино</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo-paramount-comedy_200_232.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Bolt_logo_200_173.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/filmuadrama.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ENTERFILM.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Музыкальные-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Музыкальные</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/m1newfin1-01.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/m2.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/O-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/MB_logo_redes_2015_color.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Детские-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Детские</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/plus-plus.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/piksel.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/malyatko-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Lale.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Информационно-развлекательные-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Информационно-развлекательные</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1+1.png" alt="1+1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ukraina_131.png" alt="ТРК Україна"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ictv_logo_200_100.png" alt="ICTV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/STB.png" alt="СТБ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/noviy-kanal.png" alt="Новый канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/tet_color_170x183.png" alt="ТЕТ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2plus2_Logo200_100.png" alt="2+2"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Inter.png" alt="Інтер"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/kvartal.png" alt="Kvartal TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/uapershyi_logo.png" alt="UA: Перший"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/k1.png" alt="К1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/k2.png" alt="К2"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/oboztv_logo_200_60.png" alt="Обоз TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/HTH-logo.png" alt="НТН"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nlo-tv_.png" alt="НЛО"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/bigudi.png" alt="Бігуді"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2ddb8bcfdac8b958c7022369bf9e9bc1.png" alt="Центральний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ua-crimea-logo_200-32.png" alt="UA: Крим"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/zakarpattia170.png" alt="UA: ЗАКАРПАТТЯ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/donbas.png" alt="UA: Донбас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1_Zahidniy.png" alt="Перший Західний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/kyiv_Ukr_orange-01.png" alt="ТРК Київ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/atr.png" alt="ATR"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/CHTRK1-01.png" alt="ТРК «Чорноморська»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/avers_170.png" alt="Аверс"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2c2e8a3a71543adc86503ebb75fc5913.png" alt="ТВА"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV5_logo_UA-01.png" alt="TV5"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_pershiy_kanal_ukr_radio1.jpg" alt="Перший канал Українського радіо"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo-radio-kultura1.jpg" alt="Радіо «Культура»"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_radio_promin1.jpg" alt="Радіо «Промінь»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_sun.png" alt="Сонце"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/OCE-logo_200_100.jpg" alt="Телеканал ОЦЕ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/indigo-tv.png" alt="Індиго ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/g_tv_logo.png" alt="Genuine TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Zoom.png" alt="ZOOM"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/c5f736ed759be55f20fe237360a7b063.png" alt="Maxxi TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Telesvit_logo_200.png" alt="Телевсесвіт"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/KBS_World_Logo.png" alt="KBS World"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/eco-tv.png" alt="Еко-ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/boutiquel_logo_250_47.png" alt="BOUTIQUE TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Natali_logo_200_60.png" alt="Наталі"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/cc62be63c11c67e026045a877b0cff93.png" alt="Milady Television"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/karavan_tv_200_119.png" alt="Караван TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/glas.png" alt="Глас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/KRT_new.png" alt="КРТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/rada.png" alt="Рада"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/c4cd07465fd4e2b1e753e12b077b1936.png" alt="UA: Культура"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/8_channel__logo_220_63.png" alt="8 Канал"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </dd>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href="#">
+        <dt>
+          <i class="fas fa-tv"></i> Список каналов тарифного плана "Семейный"
+        </dt>
+      </a>
+      <div class="uk-accordion-content" hidden="" aria-hidden="true">
+        <dd class="uk-margin-small-top">
+          <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+
+            <!--Спорт-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Спорт</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/viasat-sport.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/XSPORT1.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/trofey.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Новости-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Новости</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/a096d832e7eaac5985ad86bea151aa5d.png" alt="УНІАН"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/112.png" alt="112"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/espresso-tv.png" alt="Еспресо ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/zik_logo_versiya2.jpg" alt="ZIK"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/pravda_tut_logo1.png" alt="ПравдаТУТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1delovoy.png" alt="Перший діловий"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/HROMADSKE-UA-logo_180_35.png" alt="Hromadske.ua"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4Channel_logo_300_300.png" alt="4 канал"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo_5tv_01.png" alt="5 канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/24_novosti.png" alt="24"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/cb021b7ec416133cb320b1b2d87336aa.png" alt="Прямий"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/News_one.png" alt="NEWS ONE"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/7a02e0ba08e360cdddae09fe6925fb81.png" alt="Rabinovich TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4bba5d06f002cb076db58518cb46e34f.png" alt="ЧП.Info"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/UA_TV.png" alt="UA | TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nastoyaschee_vremya_logo1.png" alt="Настоящее Время"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/tv5-monde.png" alt="TV 5 Monde"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/dw.png" alt="DW (en)"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/36cd166d7d57bca52ef3a8d49af53a60.png" alt="DW (de)"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_euronews_174.jpg" alt="Euronews"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Bloomberg_Television_stack_blk.png" alt="Bloomberg TV"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Спорт-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Спорт</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/viasat_explore.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/VIASAT_HISTORY.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/VIASAT_NATURE.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/english-club-tv.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Mega-logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/dacha_logo.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Кино-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Спорт</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/VIP-LOGO-for_site_Comedy_200_104.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000-ACTION.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000_WorldKino_RGB11.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo-paramount-comedy_200_232.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Bolt_logo_200_173.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/filmuadrama.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ENTERFILM.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Музыкальные-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Музыкальные</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/m1newfin1-01.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/m2.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/O-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/MB_logo_redes_2015_color.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Детские-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Детские</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/plus-plus.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/piksel.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/malyatko-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Lale.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Информационно-развлекательные-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Информационно-развлекательные</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1+1.png" alt="1+1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ukraina_131.png" alt="ТРК Україна"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ictv_logo_200_100.png" alt="ICTV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/STB.png" alt="СТБ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/noviy-kanal.png" alt="Новый канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/tet_color_170x183.png" alt="ТЕТ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2plus2_Logo200_100.png" alt="2+2"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Inter.png" alt="Інтер"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/kvartal.png" alt="Kvartal TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/uapershyi_logo.png" alt="UA: Перший"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/k1.png" alt="К1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/k2.png" alt="К2"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/oboztv_logo_200_60.png" alt="Обоз TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/HTH-logo.png" alt="НТН"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nlo-tv_.png" alt="НЛО"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/bigudi.png" alt="Бігуді"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2ddb8bcfdac8b958c7022369bf9e9bc1.png" alt="Центральний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ua-crimea-logo_200-32.png" alt="UA: Крим"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/zakarpattia170.png" alt="UA: ЗАКАРПАТТЯ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/donbas.png" alt="UA: Донбас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1_Zahidniy.png" alt="Перший Західний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/kyiv_Ukr_orange-01.png" alt="ТРК Київ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/atr.png" alt="ATR"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/CHTRK1-01.png" alt="ТРК «Чорноморська»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/avers_170.png" alt="Аверс"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2c2e8a3a71543adc86503ebb75fc5913.png" alt="ТВА"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV5_logo_UA-01.png" alt="TV5"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_pershiy_kanal_ukr_radio1.jpg" alt="Перший канал Українського радіо"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo-radio-kultura1.jpg" alt="Радіо «Культура»"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_radio_promin1.jpg" alt="Радіо «Промінь»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_sun.png" alt="Сонце"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/OCE-logo_200_100.jpg" alt="Телеканал ОЦЕ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/indigo-tv.png" alt="Індиго ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/g_tv_logo.png" alt="Genuine TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Zoom.png" alt="ZOOM"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/c5f736ed759be55f20fe237360a7b063.png" alt="Maxxi TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Telesvit_logo_200.png" alt="Телевсесвіт"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/KBS_World_Logo.png" alt="KBS World"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/eco-tv.png" alt="Еко-ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/boutiquel_logo_250_47.png" alt="BOUTIQUE TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Natali_logo_200_60.png" alt="Наталі"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/cc62be63c11c67e026045a877b0cff93.png" alt="Milady Television"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/karavan_tv_200_119.png" alt="Караван TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/glas.png" alt="Глас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/KRT_new.png" alt="КРТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/rada.png" alt="Рада"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/c4cd07465fd4e2b1e753e12b077b1936.png" alt="UA: Культура"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/8_channel__logo_220_63.png" alt="8 Канал"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </dd>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href="#">
+        <dt>
+          <i class="fas fa-tv"></i> Список каналов тарифного плана "Престижный"
+        </dt>
+      </a>
+      <div class="uk-accordion-content" hidden="" aria-hidden="true">
+        <dd class="uk-margin-small-top">
+          <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+
+            <!--Спорт-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Спорт</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ESP_CLT_1_NVY_RED_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/viasat-sport.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ESP_CLT_2_NVY_RED_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/XSPORT1.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/trofey.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Новости-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Новости</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/a096d832e7eaac5985ad86bea151aa5d.png" alt="УНІАН"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/112.png" alt="112"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/espresso-tv.png" alt="Еспресо ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/zik_logo_versiya2.jpg" alt="ZIK"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/pravda_tut_logo1.png" alt="ПравдаТУТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1delovoy.png" alt="Перший діловий"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/HROMADSKE-UA-logo_180_35.png" alt="Hromadske.ua"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4Channel_logo_300_300.png" alt="4 канал"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo_5tv_01.png" alt="5 канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/24_novosti.png" alt="24"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/cb021b7ec416133cb320b1b2d87336aa.png" alt="Прямий"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/News_one.png" alt="NEWS ONE"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/7a02e0ba08e360cdddae09fe6925fb81.png" alt="Rabinovich TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4bba5d06f002cb076db58518cb46e34f.png" alt="ЧП.Info"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/UA_TV.png" alt="UA | TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nastoyaschee_vremya_logo1.png" alt="Настоящее Время"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/tv5-monde.png" alt="TV 5 Monde"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/dw.png" alt="DW (en)"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/36cd166d7d57bca52ef3a8d49af53a60.png" alt="DW (de)"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_euronews_174.jpg" alt="Euronews"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Bloomberg_Television_stack_blk.png" alt="Bloomberg TV"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Познавательные-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Познавательные</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/viasat_explore.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/VIASAT_HISTORY.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/VIASAT_NATURE.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/english-club-tv.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/discovery.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/641f456f4a871195582e7345e73ef8ee.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/200_SCI_Logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/animalplanet_170_83.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/national-geographic-channel.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TCI_Pantone_2728C.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Mega-logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TLC-logo.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/fn_US_LOGO_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Fine_Living.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/dacha_logo.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Кино-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Кино</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/SET_new2.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/SCI_FI_NEW.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/SONY_TURBO_LOGO.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/VIP-LOGO-for_site_Comedy_200_104.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000-ACTION.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000_WorldKino_RGB11.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/SpikeLogo_150_60.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/fox_tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo-paramount-comedy_200_232.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Bolt_logo_200_173.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/filmuadrama.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ENTERFILM.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Музыкальные-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Музыкальные</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/m1newfin1-01.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/m2.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/O-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/MB_logo_redes_2015_color.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Детские-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Детские</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/plus-plus.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/piksel.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/malyatko-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Lale.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Nickelodeon_logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nick-jr.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Информационно-развлекательные-->
+            <div class="uk-width-1-1@l">
+              <h2 class="uk-heading-line uk-text-center"><span>Информационно-развлекательные</span></h2>
+              <div uk-grid="" class="uk-grid uk-grid-stack">
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1+1.png" alt="1+1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ukraina_131.png" alt="ТРК Україна"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ictv_logo_200_100.png" alt="ICTV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/STB.png" alt="СТБ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/noviy-kanal.png" alt="Новый канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/tet_color_170x183.png" alt="ТЕТ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2plus2_Logo200_100.png" alt="2+2"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Inter.png" alt="Інтер"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/kvartal.png" alt="Kvartal TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/uapershyi_logo.png" alt="UA: Перший"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/k1.png" alt="К1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/k2.png" alt="К2"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/oboztv_logo_200_60.png" alt="Обоз TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/HTH-logo.png" alt="НТН"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nlo-tv_.png" alt="НЛО"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/bigudi.png" alt="Бігуді"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2ddb8bcfdac8b958c7022369bf9e9bc1.png" alt="Центральний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ua-crimea-logo_200-32.png" alt="UA: Крим"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/zakarpattia170.png" alt="UA: ЗАКАРПАТТЯ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/donbas.png" alt="UA: Донбас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1_Zahidniy.png" alt="Перший Західний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/kyiv_Ukr_orange-01.png" alt="ТРК Київ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/atr.png" alt="ATR"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/CHTRK1-01.png" alt="ТРК «Чорноморська»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/avers_170.png" alt="Аверс"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2c2e8a3a71543adc86503ebb75fc5913.png" alt="ТВА"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV5_logo_UA-01.png" alt="TV5"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_pershiy_kanal_ukr_radio1.jpg" alt="Перший канал Українського радіо"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo-radio-kultura1.jpg" alt="Радіо «Культура»"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_radio_promin1.jpg" alt="Радіо «Промінь»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_sun.png" alt="Сонце"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/OCE-logo_200_100.jpg" alt="Телеканал ОЦЕ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/indigo-tv.png" alt="Індиго ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/g_tv_logo.png" alt="Genuine TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Zoom.png" alt="ZOOM"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/c5f736ed759be55f20fe237360a7b063.png" alt="Maxxi TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Telesvit_logo_200.png" alt="Телевсесвіт"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/KBS_World_Logo.png" alt="KBS World"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/eco-tv.png" alt="Еко-ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/boutiquel_logo_250_47.png" alt="BOUTIQUE TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Natali_logo_200_60.png" alt="Наталі"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/cc62be63c11c67e026045a877b0cff93.png" alt="Milady Television"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/karavan_tv_200_119.png" alt="Караван TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/glas.png" alt="Глас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/KRT_new.png" alt="КРТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/rada.png" alt="Рада"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/c4cd07465fd4e2b1e753e12b077b1936.png" alt="UA: Культура"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/8_channel__logo_220_63.png" alt="8 Канал"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </dd>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href="#">
+        <dt>
+          <i class="fas fa-tv"></i> Список каналов тарифного плана "Престижный HD"
+        </dt>
+      </a>
+      <div class="uk-accordion-content" hidden="" aria-hidden="true">
+        <dd class="uk-margin-small-top">
+          <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+
+            <!--Спорт-->
+            <div class="uk-width-1-1@l uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Спорт</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-6@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ESP_CLT_1HD_NVY_RED_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/viasat-sport-hd.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ESP_CLT_2_NVY_RED_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/XSPORT1.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/trofey.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Новости-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Новости</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/a096d832e7eaac5985ad86bea151aa5d.png" alt="УНІАН"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/112hd.png" alt="112"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/espresso-tv.png" alt="Еспресо ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/zik_logo_versiya2.jpg" alt="ZIK"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/pravda_tut_logo1.png" alt="ПравдаТУТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1delovoy.png" alt="Перший діловий"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/HROMADSKE-UA-logo_180_35.png" alt="Hromadske.ua"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4Channel_logo_300_300.png" alt="4 канал"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo_5tv_01.png" alt="5 канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/24_novosti.png" alt="24"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/cb021b7ec416133cb320b1b2d87336aa.png" alt="Прямий"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/News_one.png" alt="NEWS ONE"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/7a02e0ba08e360cdddae09fe6925fb81.png" alt="Rabinovich TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4bba5d06f002cb076db58518cb46e34f.png" alt="ЧП.Info"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/UA_TV.png" alt="UA | TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nastoyaschee_vremya_logo1.png" alt="Настоящее Время"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/tv5-monde.png" alt="TV 5 Monde"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/dw.png" alt="DW (en)"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/36cd166d7d57bca52ef3a8d49af53a60.png" alt="DW (de)"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_euronews_174.jpg" alt="Euronews"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Bloomberg_Television_stack_blk.png" alt="Bloomberg TV"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Познавательные-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Познавательные</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-6@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/viasat_explore.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/VIASAT_HISTORY.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/VIASAT_NATURE.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/viasat_history_nature_HD.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/discovery.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/641f456f4a871195582e7345e73ef8ee.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/200_SCI_Logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/animalplanet_170_83.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/national-geographic-channel.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TCI_Pantone_2728C.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Mega-logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TLC-logo.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/fn_US_LOGO_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Fine_Living.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/dacha_logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/english-club-tv-hd.png"></div>
+
+                  </div>
+                </div>
+                <div class="uk-width-1-6@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ShowcaseHD.png"></div>
+
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Кино-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Кино</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-6@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/SET_new2.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/SCI_FI_NEW.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/SONY_TURBO_LOGO.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/VIP-LOGO-for_site_Comedy_200_104.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000-ACTION.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/TV1000_WorldKino_RGB11.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/SpikeLogo_150_60.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/fox_tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo-paramount-comedy_200_232.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Bolt_logo_200_173.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/filmuadrama.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ENTERFILM.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Музыкальные-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Музыкальные</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/m1newfin1-01.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/m2.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/O-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/MB_logo_redes_2015_color.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Детские-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Детские</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/plus-plus.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/piksel.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/malyatko-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Lale.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/nickelodeon-hd.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nick-jr.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Информационно-развлекательные-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Информационно-развлекательные</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/c3bf98acd13a71974041008bc01c3dc4.png" alt="1+1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ukraina_131.png" alt="ТРК Україна"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ictv_logo_200_100.png" alt="ICTV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/STB.png" alt="СТБ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/noviy-kanal.png" alt="Новый канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/tet_color_170x183.png" alt="ТЕТ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/2plus2_Logo200_100.png" alt="2+2"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Inter.png" alt="Інтер"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/kvartal.png" alt="Kvartal TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/uapershyi_logo.png" alt="UA: Перший"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/k1.png" alt="К1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/k2.png" alt="К2"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/oboztv_logo_200_60.png" alt="Обоз TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/HTH-logo.png" alt="НТН"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/nlo-tv_.png" alt="НЛО"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/bigudi.png" alt="Бігуді"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/2ddb8bcfdac8b958c7022369bf9e9bc1.png" alt="Центральний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ua-crimea-logo_200-32.png" alt="UA: Крим"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/zakarpattia170.png" alt="UA: ЗАКАРПАТТЯ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/donbas.png" alt="UA: Донбас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/1_Zahidniy.png" alt="Перший Західний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/kyiv_Ukr_orange-01.png" alt="ТРК Київ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/atr.png" alt="ATR"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/CHTRK1-01.png" alt="ТРК «Чорноморська»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/avers_170.png" alt="Аверс"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2c2e8a3a71543adc86503ebb75fc5913.png" alt="ТВА"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/TV5_logo_UA-01.png" alt="TV5"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_pershiy_kanal_ukr_radio1.jpg" alt="Перший канал Українського радіо"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo-radio-kultura1.jpg" alt="Радіо «Культура»"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_radio_promin1.jpg" alt="Радіо «Промінь»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo_sun.png" alt="Сонце"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/OCE-logo_200_100.jpg" alt="Телеканал ОЦЕ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/indigo-tv.png" alt="Індиго ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/g_tv_logo.png" alt="Genuine TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Zoom.png" alt="ZOOM"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/c5f736ed759be55f20fe237360a7b063.png" alt="Maxxi TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Telesvit_logo_200.png" alt="Телевсесвіт"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/KBS_World_Logo.png" alt="KBS World"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/eco-tv.png" alt="Еко-ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/boutiquel_logo_250_47.png" alt="BOUTIQUE TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Natali_logo_200_60.png" alt="Наталі"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/cc62be63c11c67e026045a877b0cff93.png" alt="Milady Television"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/karavan_tv_200_119.png" alt="Караван TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/glas.png" alt="Глас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/KRT_new.png" alt="КРТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/rada.png" alt="Рада"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/c4cd07465fd4e2b1e753e12b077b1936.png" alt="UA: Культура"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/8_channel__logo_220_63.png" alt="8 Канал"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </dd>
+      </div>
+    </li>
+    <li class="uk-open">
+      <a class="uk-accordion-title" href="#">
+        <dt>
+          <i class="fas fa-tv"></i> Список каналов тарифного плана "Премиум HD"
+        </dt>
+      </a>
+      <div class="uk-accordion-content" hidden="" aria-hidden="true">
+        <dd class="uk-margin-small-top">
+          <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+
+            <!--Спорт-->
+            <div class="uk-width-1-1@l uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Спорт</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-6@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ESP_CLT_1HD_NVY_RED_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/viasat-sport-hd.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ESP_CLT_2_NVY_RED_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/XSPORT1.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/trofey.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Новости-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Новости</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/a096d832e7eaac5985ad86bea151aa5d.png" alt="УНІАН"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/112hd.png" alt="112"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/espresso-tv.png" alt="Еспресо ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/zik_logo_versiya2.jpg" alt="ZIK"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/pravda_tut_logo1.png" alt="ПравдаТУТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/1delovoy.png" alt="Перший діловий"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/HROMADSKE-UA-logo_180_35.png" alt="Hromadske.ua"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4Channel_logo_300_300.png" alt="4 канал"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo_5tv_01.png" alt="5 канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/24_novosti.png" alt="24"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/cb021b7ec416133cb320b1b2d87336aa.png" alt="Прямий"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/News_one.png" alt="NEWS ONE"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/7a02e0ba08e360cdddae09fe6925fb81.png" alt="Rabinovich TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/4bba5d06f002cb076db58518cb46e34f.png" alt="ЧП.Info"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/UA_TV.png" alt="UA | TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nastoyaschee_vremya_logo1.png" alt="Настоящее Время"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-first-column uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/tv5-monde.png" alt="TV 5 Monde"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/dw.png" alt="DW (en)"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/36cd166d7d57bca52ef3a8d49af53a60.png" alt="DW (de)"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_euronews_174.jpg" alt="Euronews"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Bloomberg_Television_stack_blk.png" alt="Bloomberg TV"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Познавательные-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Познавательные</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-6@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/viasat_explore.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/VIASAT_HISTORY.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/VIASAT_NATURE.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/viasat_history_nature_HD.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/discovery.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/641f456f4a871195582e7345e73ef8ee.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/200_SCI_Logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/animalplanet_170_83.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/national-geographic-channel.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TCI_Pantone_2728C.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Mega-logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TLC-logo.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/fn_US_LOGO_RGB.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Fine_Living.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/dacha_logo.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/english-club-tv-hd.png"></div>
+
+                  </div>
+                </div>
+                <div class="uk-width-1-6@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ShowcaseHD.png"></div>
+
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Кино-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Кино</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-6@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/SET_new2.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/SCI_FI_NEW.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/SONY_TURBO_LOGO.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/VIP-LOGO-for_site_Comedy_200_104.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/TV1000-ACTION.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/TV1000_WorldKino_RGB11.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/SpikeLogo_150_60.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/fox_tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo-paramount-comedy_200_232.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Bolt_logo_200_173.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/filmuadrama.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-6@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid uk-grid-stack">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ENTERFILM.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Музыкальные-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Музыкальные</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/m1newfin1-01.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/m2.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/O-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/MB_logo_redes_2015_color.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Детские-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Детские</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/plus-plus.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/piksel.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/malyatko-tv.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Lale.png"></div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/nickelodeon-hd.png"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/nick-jr.png"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Информационно-развлекательные-->
+            <div class="uk-width-1-1@l uk-grid-margin uk-first-column">
+              <h2 class="uk-heading-line uk-text-center"><span>Информационно-развлекательные</span></h2>
+              <div uk-grid="" class="uk-grid">
+
+                <div class="uk-width-1-4@l uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/c3bf98acd13a71974041008bc01c3dc4.png" alt="1+1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ukraina_131.png" alt="ТРК Україна"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/ictv_logo_200_100.png" alt="ICTV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/STB.png" alt="СТБ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/noviy-kanal.png" alt="Новый канал"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/tet_color_170x183.png" alt="ТЕТ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/2plus2_Logo200_100.png" alt="2+2"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/Inter.png" alt="Інтер"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/kvartal.png" alt="Kvartal TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/uapershyi_logo.png" alt="UA: Перший"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/k1.png" alt="К1"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/k2.png" alt="К2"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/oboztv_logo_200_60.png" alt="Обоз TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/HTH-logo.png" alt="НТН"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/nlo-tv_.png" alt="НЛО"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/bigudi.png" alt="Бігуді"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/2ddb8bcfdac8b958c7022369bf9e9bc1.png" alt="Центральний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/ua-crimea-logo_200-32.png" alt="UA: Крим"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/zakarpattia170.png" alt="UA: ЗАКАРПАТТЯ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/donbas.png" alt="UA: Донбас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/1_Zahidniy.png" alt="Перший Західний"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/kyiv_Ukr_orange-01.png" alt="ТРК Київ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/atr.png" alt="ATR"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/CHTRK1-01.png" alt="ТРК «Чорноморська»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/avers_170.png" alt="Аверс"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/2c2e8a3a71543adc86503ebb75fc5913.png" alt="ТВА"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/TV5_logo_UA-01.png" alt="TV5"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_pershiy_kanal_ukr_radio1.jpg" alt="Перший канал Українського радіо"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo-radio-kultura1.jpg" alt="Радіо «Культура»"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/logo_radio_promin1.jpg" alt="Радіо «Промінь»"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/logo_sun.png" alt="Сонце"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/OCE-logo_200_100.jpg" alt="Телеканал ОЦЕ"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/indigo-tv.png" alt="Індиго ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/g_tv_logo.png" alt="Genuine TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Zoom.png" alt="ZOOM"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/c5f736ed759be55f20fe237360a7b063.png" alt="Maxxi TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Telesvit_logo_200.png" alt="Телевсесвіт"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/KBS_World_Logo.png" alt="KBS World"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/eco-tv.png" alt="Еко-ТВ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/boutiquel_logo_250_47.png" alt="BOUTIQUE TV"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin uk-first-column">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/Natali_logo_200_60.png" alt="Наталі"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/cc62be63c11c67e026045a877b0cff93.png" alt="Milady Television"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/karavan_tv_200_119.png" alt="Караван TV"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/glas.png" alt="Глас"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/KRT_new.png" alt="КРТ"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/rada.png" alt="Рада"></div>
+                  </div>
+                </div>
+                <div class="uk-width-1-4@l uk-grid-margin">
+                  <div uk-grid="" class="uk-grid-small uk-grid">
+                    <div class="uk-width-1-2@l uk-first-column"><img src="https://viasat.ua/uploads/images/c4cd07465fd4e2b1e753e12b077b1936.png" alt="UA: Культура"></div>
+                    <div class="uk-width-1-2@l"><img src="https://viasat.ua/uploads/images/8_channel__logo_220_63.png" alt="8 Канал"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </dd>
+      </div>
+    </li>
+  </ul>
+</dl>
+
+<h2>Что входит в указанную стоимость</h2>
+<dl class="uk-description-list uk-description-list-divider">
+  <dt>Выезд мастера</dt>
+  <dd>После того как вы согласуете все детали вашего подключения по телефону, наш мастер выедет к вам на объект.</dd>
+  <dt>Оборудование</dt>
+  <dd>К примеру вы выбрали комплект №4 на четыре телевизора за 5300 грн. В эту сумму будут включены четыре тюнера, параболическая антена, три антенных передатчика и сплиттер на четыре телевизора.</dd>
+  <dt>Монтаж и настройка</dt>
+  <dd>Собрав всю необходимую информацию о подключении, наш мастер, со всем необходимым оборудованием для подключения спутникового телевидения, приедет к вам на объект, осуществит монтаж спутниковой антены и отведёт нужное количество кабеля до
+    каждого телевизора, после чего будет произведена настройка ресиверов.
+  </dd>
+</dl><h2>Дополнительная информация</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения всех каналов без абонентской платы</h3>
+<ul class="uk-list"><a href="/ru/подключение-и-настройка-спутникового-телевидения">
+  <li><i class="fas fa-external-link-alt"></i> Подключение и настройка спутникового телевидения</li>
+</a>
+  <p class="uk-text-meta uk-margin-remove">* В данном подключении с 20.01.2020 г. не будет основных украинских каналов</p>  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">
+    <li class="uk-padding-small uk-padding-remove-left"><i class="fas fa-external-link-alt"></i> Подключение и настройка цифрового эфирного телевидения (DVB-T2)</li>
+  </a> <a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">
+    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка комбинированного (спутникового и эфирного DVB-T2) телевидения</li>
+  </a></ul><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения всех каналов c абонентской платой</h3>
+<ul class="uk-list"><a href="/ru/лючение-и-настройка-extra-tv">
+  <li><i class="fas fa-external-link-alt"></i> Подключение и настройка Extra TV</li>
+</a> <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">
+  <li class="uk-padding-small uk-padding-remove-left uk-padding-remove-bottom"><i class="fas fa-external-link-alt"></i>Подключение и настройка интернет телевидения (IPTV, OTT)</li>
+</a></ul>
+', 20);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 17, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка<br>
+Extra TV</h1>
+    
+    
+    
+    
+  </div>
+</div>', 21);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 18, ' ', 22);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 19, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Модернизация,настройка и<br>
+ремонт спутниковой антены</h1>
+    
+    
+    
+    
+  </div>
+</div>', 23);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 20, ' ', 24);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 21, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Ремонт, настройка и прошивка<br>
+спутниковых тюнеров (ресиверов)</h1>
+    
+    
+    
+    
+  </div>
+</div>', 25);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 22, ' ', 26);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 23, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Модернизация, настройка и ремонт оборудования<br>
+для цифрового эфирного телевидения (Т2)</h1>
+    
+    
+    
+    
+  </div>
+</div>', 27);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 24, ' ', 28);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 25, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Megogo</h1>
+    
+    
+    
+    
+  </div>
+</div>', 29);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 26, ' ', 30);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 27, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">OLL TV</h1>
+    
+    
+    
+    
+  </div>
+</div>', 31);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 28, ' ', 32);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 29, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Divan TV</h1>
+    
+    
+    
+    
+  </div>
+</div>', 33);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 30, ' ', 34);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 31, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Демонтаж спутниковой антены</h1>
+    
+    
+    
+    
+  </div>
+</div>', 35);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 32, ' ', 36);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 53, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">  <div class="uk-width-1-1@l uk-padding uk-first-column">    <h1 class="uk-margin-small page-header">Подключение и настройка комбинированного (эфирного и спутникового) телевидения</h1>                  </div></div>', 57);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 54, '<h2>Цены</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ (Спутниковая + пассивная эфирная антена + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower"></i></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 2900 - 3150 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется пассивная антена для одного телевизора. Для обеспечения уверенного приёма и качественной картинки  растояние между эфирной вышкой и приёмной антеной Т2 должно быть <span    class="red-color uk-text-bold">не больше 20 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ (Спутниковая + активная эфирная антена с усилителем + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower red-color"></i></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 3000 - 3250 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется антена с усилителем для одного телевизора. Для обеспечения уверенного приёма и качественной  картинки растояние между эфирной вышкой и приёмной антеной Т2 должно быть <span    class="red-color uk-text-bold">не  больше  40 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ(Спутниковая + пассивная эфирная антена + внешний усилитель + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower"></i> + <span class="red-color">УСИЛИТЕЛЬ</span></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 3400 - 3650 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется пасивная антена с внешним усилителем для одного телевизора. Для обеспечения уверенного приёма и  качественной картинки растояние между эфирной вышкой и приёмной антеной Т2 должно  быть <span class="red-color uk-text-bold">не больше 80 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><table class="uk-table uk-table-hover uk-table-middle uk-table-divider">  <thead>  <tr>    <th>Комплект на</th>    <th class="uk-width-small">Цена</th>    <th class="uk-table-shrink uk-text-nowrap"></th>  </tr>  </thead>  <tbody>  <tr>    <td>2 ТВ</td>    <td class="uk-text-truncate">4900 - 5300 грн.</td>  </tr>  <tr>    <td>3 ТВ</td>    <td class="uk-text-truncate">5800 - 6200 грн.</td>  </tr>  <tr>    <td>4 ТВ</td>    <td class="uk-text-truncate">6600 - 7000 грн.</td>  </tr>  <tr>    <td>5 ТВ</td>    <td class="uk-text-truncate">7400 - 7800 грн.</td>  </tr>  </tbody></table><hr class="uk-divider-icon"><h2>Что входит в указанную стоимость</h2><dl class="uk-description-list uk-description-list-divider">  <dt>Выезд мастера</dt>  <dd>После того как вы согласуете все детали вашего подключения по телефону, наш мастер выедет к вам на объект.</dd>  <dt>Оборудование</dt>  <dd>Комплектация зависит от : 1. Растояния между вышкой и местом монтажа антены, высоты на которой будет размещена антена, окружающей среды и наличия других радио устройств.    Комплект по самой низкой цене является опциональным и применяется в тех местах где уселение не нужно и качество сигнала высокое. В большинстве случаев используется комплектация    с усилителем сигнала. <span class="red-color">Эти условия не относится к подключению спутниковой антены</span>.  </dd>  <dt>Монтаж и настройка</dt>  <dd>Собрав всю необходимую информацию о подключении, наш мастер, со всем необходимым оборудованием для подключения комбинированного спутиникового + эфирного (DVB-T2) телевидения,    приедет к вам на объект. После    чего он осуществит монтаж антен и их настройку. Далее монтажник отведёт нужное количество кабеля до места размещения телевизора. Окончательным этапом является подключение    тюнера и его настройка.  </dd></dl><hr class="uk-divider-icon"><h2>Дополнительная информация</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения без абонентской платы</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-спутникового-телевидения">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка спутникового телевидения    </li>  </a>  <p class="uk-text-meta uk-margin-remove">* В данном подключении с 20.01.2020 г. не будет основных украинских каналов</p>  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">    <li class="uk-padding-small uk-padding-remove-left uk-padding-remove-bottom"><i class="fas fa-external-link-alt"></i> Подключение и настройка цифрового эфирного телевидения      (DVB-T2)    </li>  </a></ul><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения всех каналов c абонентской платой</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-viasat">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка Viasat</li>  </a>  <a href="/ru/лючение-и-настройка-extra-tv">    <li class="uk-padding-small uk-padding-remove-left"><i class="fas fa-external-link-alt"></i> Подключение и настройка Extra TV</li>  </a>  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">    <li><i class="fas fa-external-link-alt"></i>Подключение и настройка интернет телевидения (IPTV, OTT)</li>  </a></ul>', 58);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 33, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Видеонаблюдение</h1>
+    <p class="header-separator uk-margin-remove">Проектирование и монтаж систем видеонаблюдения:</p>
+    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
+      <a href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#проводные">Проводные</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#безпроводные">Безпроводные</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#комбинированные">Комбинированные</a>
+      
+      
+      
+      
+    </p>
+    <p class="header-separator uk-margin-remove-bottom">Дополнительные услуги: </p>
+    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
+      <a href="/ru/модернизация-настройка-и-ремонт-систем-видеонаблюдения">Модернизация, настройка и ремонт систем видеонаблюдения</a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </p>
+  </div>
+</div>', 37);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 34, '<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Проектирование и монтаж проводных систем видеонаблюдения</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#проводные" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Проектирование и монтаж безпроводных систем видеонаблюдения</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#безпроводные" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Проектирование и монтаж комбинированных систем видеонаблюдения</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#комбинированные" class="uk-button uk-button-secondary">Читать материал</a>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Модернизация, настройка и ремонт систем видеонаблюдения</h2>
+<p>Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+
+
+</p>
+<a href="/ru/модернизация-настройка-и-ремонт-систем-видеонаблюдения" class="uk-button uk-button-secondary">Читать материал</a>', 38);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 35, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Проектирование и монтаж<br>
+систем видеонаблюдения</h1>
+    
+    
+    
+    
+  </div>
+</div>', 39);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 36, ' ', 40);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 37, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Модернизация, настройка и ремонт<br>
+систем видеонаблюдения</h1>
+    
+    
+    
+    
+  </div>
+</div>', 41);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 38, ' ', 42);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 39, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Интернет</h1>
+    <p class="header-separator uk-margin-remove">Подключение и настройка:</p>
+    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
+      <a href="/ru/подключение-и-настройка-спутникового-интернета">Cпутникового интернета</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">3G и 4G интернета операторов мобильной связи Kyivstar, Life Cell и Vodafone</a>
+      
+      
+      
+      
+      
+      
+    </p>
+    <p class="header-separator uk-margin-remove-bottom">Дополнительные услуги: </p>
+    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
+      <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">Усиление 3G, 4G и GSM сигнала операторов мобильной связи Kyivstar, Life Cell и Vodafone</a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </p>
+  </div>
+</div>', 43);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 40, '<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Подключение и настройка спутникового интернета</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/подключение-и-настройка-спутникового-интернета" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Подключение и настройка 3G и 4G интернета операторов мобильной связи Kyivstar, Life Cell и Vodafone</h2>
+<p>
+  Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия.
+  Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+</p>
+<a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone" class="uk-button uk-button-secondary">Читать материал</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Усиление 3G, 4G и GSM сигнала операторов мобильной связи Kyivstar, Life Cell и Vodafone</h2>
+<p>Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что консультация с широким активом требуют определения и уточнения форм развития.
+
+
+</p>
+<a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone" class="uk-button uk-button-secondary">Читать материал</a>', 44);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 41, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка<br>
+спутникового интернета</h1>
+    
+    
+    
+    
+  </div>
+</div>', 45);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 42, ' ', 46);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 43, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка 3G и 4G интернета <br>
+операторов мобильной связи Kyivstar, Life Cell и Vodafone</h1>
+    
+    
+    
+    
+  </div>
+</div>', 47);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 44, ' ', 48);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 45, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Усиление 3G, 4G и GSM сигнала операторов<br>
+мобильной связи Kyivstar, Life Cell и Vodafone</h1>
+    
+    
+    
+    
+  </div>
+</div>', 49);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 46, ' ', 50);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 47, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Домофонные системы</h1>
+    
+    
+    
+    
+  </div>
+</div>', 51);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 48, ' ', 52);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 49, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Обслуживание ПК</h1>
+    
+    
+    
+    
+  </div>
+</div>', 53);
+
+-- ----------------------------
+-- Table structure for customjs
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."customjs";
+CREATE TABLE "public"."customjs" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('customjs_id_seq'::regclass),
+  "src" text COLLATE "pg_catalog"."default",
+  "moduleId" float4
+)
+;
+
+-- ----------------------------
+-- Records of customjs
+-- ----------------------------
+INSERT INTO "public"."customjs" VALUES (1571154569061, 1571154569061, 1, '/js/mainslideshow.js', 4);
+
+-- ----------------------------
+-- Table structure for languages
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."languages";
+CREATE TABLE "public"."languages" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('languages_id_seq'::regclass),
+  "code" text COLLATE "pg_catalog"."default"
+)
+;
+
+-- ----------------------------
+-- Records of languages
+-- ----------------------------
+INSERT INTO "public"."languages" VALUES (1571154569061, 1571154569061, 1, 'ru');
+
+-- ----------------------------
+-- Table structure for menu
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."menu";
+CREATE TABLE "public"."menu" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('menu_id_seq'::regclass),
+  "name" text COLLATE "pg_catalog"."default",
+  "systemName" text COLLATE "pg_catalog"."default"
+)
+;
+
+-- ----------------------------
+-- Records of menu
+-- ----------------------------
+INSERT INTO "public"."menu" VALUES (1571154569061, 1571154569061, 1, 'Главное меню', 'mainmenu');
+
+-- ----------------------------
+-- Table structure for menuitems
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."menuitems";
+CREATE TABLE "public"."menuitems" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('menuitems_id_seq'::regclass),
+  "name" text COLLATE "pg_catalog"."default",
+  "systemName" text COLLATE "pg_catalog"."default",
+  "parent" float4,
+  "level" float4,
+  "sort" float4,
+  "link" text COLLATE "pg_catalog"."default",
+  "menu" int4
+)
+;
+
+-- ----------------------------
+-- Records of menuitems
+-- ----------------------------
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 1, 'Главная', 'главная', 0, 1, 1, '/ru', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 2, 'Услуги', 'separator', 1, 1, 2, ' ', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 3, 'Телевидение', 'телевидение', 1, 2, 3, '/ru/телевидение', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 4, 'Подключение и настройка', 'separator', 1, 3, 4, ' ', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 5, 'Спутникового телевидения', 'подключение-и-настройка-спутникового-телевидения', 0, 4, 5, '/ru/подключение-и-настройка-спутникового-телевидения', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 6, 'Цифрового эфирного телевидения (Т2)', 'подключение-и-настройка-цифрового-эфирного-телевидения-т2', 0, 4, 6, '/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 7, 'Интернет телевидения (IPTV, OTT)', 'подключение-и-настройка-интернет-телевидения-iptv-ott', 0, 4, 8, '/ru/подключение-и-настройка-интернет-телевидения-iptv-ott', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 8, 'Viasat', 'подключение-и-настройка-viasat', 0, 4, 9, '/ru/подключение-и-настройка-viasat', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 9, 'Extra TV', 'подключение-и-настройка-extra-tv', 0, 4, 10, '/ru/подключение-и-настройка-extra-tv', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 10, 'Дополнительные услуги:', 'separator', 1, 3, 11, ' ', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 11, 'Модернизация, настройка и ремонт оборудования для спутникового, эфирного и IPTV телевидения', 'модернизация-настройка-и-ремонт-оборудования-для-спутникового-эфирного-и-iptv-телевидения', 0, 4, 12, '/ru/модернизация-настройка-и-ремонт-оборудования-для-спутникового-эфирного-и-iptv-телевидения', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 14, 'Megogo', 'megogo', 0, 4, 15, '/ru/подключение-и-настройка-интернет-телевидения-iptv-ott', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 15, 'OLL TV', 'oll-tv', 0, 4, 16, '/ru/подключение-и-настройка-интернет-телевидения-iptv-ott', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 16, 'Divan TV', 'divan-tv', 0, 4, 17, '/ru/подключение-и-настройка-интернет-телевидения-iptv-ott', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 17, 'Демонтаж спутниковой антены', 'separator', 0, 4, 18, '/ru/демонтаж-спутниковой-антены', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 18, 'Видеонаблюдение', 'видеонаблюдение', 1, 2, 19, '/ru/видеонаблюдение', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 19, 'Проектирование и монтаж систем видеонаблюдения', 'проектирование-и-монтаж-систем-видеонаблюдения', 1, 3, 20, '/ru/проектирование-и-монтаж-систем-видеонаблюдения', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 20, 'Проводные', 'hashlink', 0, 4, 21, '/ru/проектирование-и-монтаж-систем-видеонаблюдения#проводные', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 21, 'Безпроводные', 'hashlink', 0, 4, 22, '/ru/проектирование-и-монтаж-систем-видеонаблюдения#безпроводные', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 22, 'Комбинированные', 'hashlink', 0, 4, 23, '/ru/проектирование-и-монтаж-систем-видеонаблюдения#комбинированные', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 23, 'Дополнительные услуги:', 'separator', 1, 3, 24, ' ', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 24, 'Модернизация, настройка и ремонт систем видеонаблюдения', 'модернизация-настройка-и-ремонт-систем-видеонаблюдения', 0, 4, 25, '/ru/модернизация-настройка-и-ремонт-систем-видеонаблюдения', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 25, 'Интернет', 'интернет', 1, 2, 26, '/ru/интернет', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 26, 'Подключение и настройка:', 'separator', 1, 3, 27, ' ', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 27, 'Cпутникового интернета', 'подключение-и-настройка-спутникового-интернета', 0, 4, 28, '/ru/подключение-и-настройка-спутникового-интернета', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 28, '3G и 4G интернета операторов мобильной связи Kyivstar, Life Cell и Vodafone', 'подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone', 0, 4, 29, '/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 29, 'Дополнительные услуги:', 'separator', 1, 3, 30, ' ', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 30, 'Усиление 3G, 4G и GSM сигнала операторов мобильной связи Kyivstar, Life Cell и Vodafone', 'усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone', 0, 4, 31, '/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 31, 'Домофонные системы', 'домофонные-системы', 0, 2, 32, '/ru/домофонные-системы', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 32, 'Усиление 3G, 4G и GSM', 'усиление-3g-4g-и-gsm', 0, 2, 33, '/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 33, 'Обслуживание ПК', 'корпоративное-компьютерное-обслуживание', 0, 2, 34, '/ru/корпоративное-компьютерное-обслуживание', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 34, 'Контакты', 'контакты', 0, 1, 35, '/ru/контакты', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 35, 'Комбинированного (спутникового и эфирного Т2) телевидения', 'подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения', 0, 4, 7, '/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения', 1);
+
+-- ----------------------------
+-- Table structure for modules
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."modules";
+CREATE TABLE "public"."modules" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('modules_id_seq'::regclass),
+  "systemName" text COLLATE "pg_catalog"."default",
+  "position" text COLLATE "pg_catalog"."default",
+  "params" json,
+  "device" float4,
+  "enabled" bool
+)
+;
+
+-- ----------------------------
+-- Records of modules
+-- ----------------------------
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 1, 'mod_slideshow', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 2, 'mod_menu', 'sidebarright', '{"menuSystemName":"mainmenu","ItemsLevel":"all","style":""}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 3, 'mod_menu', 'mainmenu', '{"menuSystemName":"mainmenu","ItemsLevel":"1","style":"uk-list uk-text-center","id":"mainmenu"}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 4, 'mod_custom_js', 'javascript', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 5, 'mod_custom_html', 'section1', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 6, 'mod_custom_html', 'section1', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 7, 'mod_custom_html', 'section1', '{}', 1, 'f');
+INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 8, 'mod_custom_html', 'section1', '{}', 1, 'f');
+INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 9, 'mod_custom_html', 'section1', '{}', 1, 'f');
+INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 10, 'mod_custom_html', 'section1', '{}', 1, 'f');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 11, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 12, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 13, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 14, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 15, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 16, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 17, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 18, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 19, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 20, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 21, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 22, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 23, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 24, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 35, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 36, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 37, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 38, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 39, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 40, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 41, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 42, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 43, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 44, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 45, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 46, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 47, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 48, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 49, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 50, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 51, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 52, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 53, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 54, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 55, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 56, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 57, 'mod_custom_html', 'header', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 58, 'mod_custom_html', 'article', '{}', 1, 't');
+
+-- ----------------------------
+-- Table structure for modulestable
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."modulestable";
+CREATE TABLE "public"."modulestable" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('modulestable_id_seq'::regclass),
+  "menuItemId" float4,
+  "moduleId" float4
+)
+;
+
+-- ----------------------------
+-- Records of modulestable
+-- ----------------------------
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 1, 1, 1);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 2, 1, 10);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 3, 1, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 4, 1, 4);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 5, 1, 9);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 6, 1, 5);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 7, 1, 6);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 8, 1, 7);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 9, 1, 8);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 10, 3, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 11, 3, 11);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 12, 3, 12);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 13, 3, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 14, 5, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 15, 5, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 16, 5, 13);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 17, 5, 14);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 18, 6, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 19, 6, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 20, 6, 15);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 21, 6, 16);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 22, 7, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 23, 7, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 24, 7, 17);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 25, 7, 18);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 26, 8, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 27, 8, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 28, 8, 19);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 29, 8, 20);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 30, 9, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 31, 9, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 32, 9, 21);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 33, 9, 22);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 34, 11, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 35, 11, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 36, 11, 23);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 37, 11, 24);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 38, 12, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 39, 12, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 42, 13, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 43, 13, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 58, 17, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 59, 17, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 60, 17, 35);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 61, 17, 36);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 62, 18, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 63, 18, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 64, 18, 37);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 65, 18, 38);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 66, 19, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 67, 19, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 68, 19, 39);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 69, 19, 40);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 70, 24, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 71, 24, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 72, 24, 41);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 73, 24, 42);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 74, 25, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 75, 25, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 76, 25, 43);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 77, 25, 44);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 78, 27, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 79, 27, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 80, 27, 45);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 81, 27, 46);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 82, 28, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 83, 28, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 84, 28, 47);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 85, 28, 48);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 86, 30, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 87, 30, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 88, 30, 49);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 89, 30, 50);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 90, 31, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 91, 31, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 92, 31, 51);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 93, 31, 52);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 94, 33, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 95, 33, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 96, 33, 53);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 97, 33, 54);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 98, 34, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 99, 34, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 100, 34, 55);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 101, 34, 56);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 102, 35, 2);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 103, 35, 3);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 104, 35, 57);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 105, 35, 58);
+
+-- ----------------------------
+-- Table structure for slides
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."slides";
+CREATE TABLE "public"."slides" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('slides_id_seq'::regclass),
+  "name" text COLLATE "pg_catalog"."default",
+  "header" text COLLATE "pg_catalog"."default",
+  "description" text COLLATE "pg_catalog"."default",
+  "image" text COLLATE "pg_catalog"."default",
+  "moduleId" float4,
+  "link" text COLLATE "pg_catalog"."default"
+)
+;
+
+-- ----------------------------
+-- Records of slides
+-- ----------------------------
+INSERT INTO "public"."slides" VALUES (1571251343191, 1571251343191, 1, 'Слайд №1', 'Телевидение', 'Предоставляем полный спектр услуг по обеспечению высококачественного телевидения в следующих
+                            форматах<br>
+                            спутниковое телевидение, цифровое эфирное ТВ, IPTV', '/images/mainpage/slideshow/television.webp', 1, '/ru/телевидение');
+INSERT INTO "public"."slides" VALUES (1571251343191, 1571251343191, 2, 'Слайд №2', 'Системы видеонаблюдения', 'Внедряем современные системы видео наблюдения на предприятиях, в офисах, домах и прочих
+                            объектах. <br>Наша команда быстро и оперативно
+                            осуществит
+                            монтаж, подключение и настройку всего необходимого оборудования.', '/images/mainpage/slideshow/video-monitoring.webp', 1, '/');
+INSERT INTO "public"."slides" VALUES (1571251343191, 1571251343191, 3, 'Слайд №3', 'Интернет', 'Оперативно осуществляем профессиональный, монтаж и настройку оборудования, <br>обеспечивающее
+                            интернет, при любых погодных условиях.', '/images/mainpage/slideshow/internet.webp', 1, '/');
+INSERT INTO "public"."slides" VALUES (1571251343191, 1571251343191, 4, 'Слайд №4', 'Домофонные системы', 'Дополнительная услуга нашей компании для обеспечения максимального комфорта и безопасности
+                            <br>в вашем доме или предприятии, с системой контроля
+                            на мобильных устройствах.', '/images/mainpage/slideshow/intercom.webp', 1, '/');
+INSERT INTO "public"."slides" VALUES (1571251343191, 1571251343191, 5, 'Слайд №5', 'Уселители 3G | 4G | GSM', 'Дополнительная услуга для тех кому важна максимально качественная мобильная связь и 3G и 4G
+                            интернет. <br>Наше
+                            оборудование, значительно улучшит уровень сигнала мобильного оператора, в вашей местности.', '/images/mainpage/slideshow/gsmamplifier.webp', 1, '/');
+
+-- ----------------------------
+-- Table structure for users
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."users";
+CREATE TABLE "public"."users" (
+  "createdAt" int8,
+  "updatedAt" int8,
+  "id" int4 NOT NULL DEFAULT nextval('users_id_seq'::regclass),
+  "systemName" text COLLATE "pg_catalog"."default",
+  "password" text COLLATE "pg_catalog"."default"
+)
+;
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
+INSERT INTO "public"."users" VALUES (1571251343191, 1571251343191, 1, 'Thinker', 'CiscoVA!%9000');
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."archive_id_seq"
+OWNED BY "public"."archive"."id";
+SELECT setval('"public"."archive_id_seq"', 2, false);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."customhtml_id_seq"
+OWNED BY "public"."customhtml"."id";
+SELECT setval('"public"."customhtml_id_seq"', 55, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."customjs_id_seq"
+OWNED BY "public"."customjs"."id";
+SELECT setval('"public"."customjs_id_seq"', 2, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."languages_id_seq"
+OWNED BY "public"."languages"."id";
+SELECT setval('"public"."languages_id_seq"', 2, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."menu_id_seq"
+OWNED BY "public"."menu"."id";
+SELECT setval('"public"."menu_id_seq"', 2, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."menuitems_id_seq"
+OWNED BY "public"."menuitems"."id";
+SELECT setval('"public"."menuitems_id_seq"', 36, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."modules_id_seq"
+OWNED BY "public"."modules"."id";
+SELECT setval('"public"."modules_id_seq"', 59, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."modulestable_id_seq"
+OWNED BY "public"."modulestable"."id";
+SELECT setval('"public"."modulestable_id_seq"', 106, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."slides_id_seq"
+OWNED BY "public"."slides"."id";
+SELECT setval('"public"."slides_id_seq"', 6, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."users_id_seq"
+OWNED BY "public"."users"."id";
+SELECT setval('"public"."users_id_seq"', 2, true);
+
+-- ----------------------------
+-- Primary Key structure for table archive
+-- ----------------------------
+ALTER TABLE "public"."archive" ADD CONSTRAINT "archive_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table customhtml
+-- ----------------------------
+ALTER TABLE "public"."customhtml" ADD CONSTRAINT "customhtml_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table customjs
+-- ----------------------------
+ALTER TABLE "public"."customjs" ADD CONSTRAINT "customjs_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table languages
+-- ----------------------------
+ALTER TABLE "public"."languages" ADD CONSTRAINT "languages_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table menu
+-- ----------------------------
+ALTER TABLE "public"."menu" ADD CONSTRAINT "menu_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table menuitems
+-- ----------------------------
+ALTER TABLE "public"."menuitems" ADD CONSTRAINT "menuitems_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table modules
+-- ----------------------------
+ALTER TABLE "public"."modules" ADD CONSTRAINT "modules_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table modulestable
+-- ----------------------------
+ALTER TABLE "public"."modulestable" ADD CONSTRAINT "modulestable_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table slides
+-- ----------------------------
+ALTER TABLE "public"."slides" ADD CONSTRAINT "slides_pkey" PRIMARY KEY ("id");
+
+-- ----------------------------
+-- Primary Key structure for table users
+-- ----------------------------
+ALTER TABLE "public"."users" ADD CONSTRAINT "users_pkey" PRIMARY KEY ("id");
