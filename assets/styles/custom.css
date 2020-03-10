@@ -181,3 +181,13 @@ dt {
 .channels-list div img {
   width: 100%;
 }
+
+.background-color-unset {
+  background-color: unset !important;
+  color: #333 !important;
+  font-weight: 300 !important;
+}
+
+.custom-background-1 {
+  background: #f0506e !important;
+}
