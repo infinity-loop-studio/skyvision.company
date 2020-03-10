@@ -18,7 +18,9 @@
         </div>
     </nav>
 </div>
-<%- positions.header %>
+<% if (positions.section1){for (var i = 0; i < positions.section1.length; i++ ){ %>
+    <%- positions.section1[i] %>
+<% }} %>
 <script src="/js/uikit.js"></script>
 <script src="/js/fontawesome/all.min.js"></script>
 </body>
