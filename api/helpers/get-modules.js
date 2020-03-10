@@ -40,7 +40,7 @@ module.exports = {
       id: modulesId,
       device: device,
       enabled: true
-    });
+    }).sort('id ASC');
     for (const moduleData of modulesData) {
       switch (moduleData.systemName) {
         case 'mod_slideshow':
