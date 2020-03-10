@@ -12,15 +12,13 @@
     <nav class="uk-navbar-container">
         <div class="uk-navbar-left">
             <a class="uk-navbar-toggle" href="#">
-                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                <span uk-navbar-toggle-icon></span>
+                <span class="uk-margin-small-left">Menu</span>
             </a>
         </div>
     </nav>
 </div>
-<form action="/sendfile" enctype="multipart/form-data" method="post">
-    <p><input type="file" name="avatar"></p>
-    <p><input type="submit"></p>
-</form>
+<%- positions.header %>
 <script src="/js/uikit.js"></script>
 <script src="/js/fontawesome/all.min.js"></script>
 </body>
