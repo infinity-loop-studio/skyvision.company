@@ -11,12 +11,19 @@
 <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent custom-background-2; top: 200">
     <nav class="uk-navbar-container">
         <div class="uk-navbar-left">
-            <a class="uk-navbar-toggle" href="#">
+            <a class="uk-navbar-toggle" href="#offcanvas-reveal" uk-toggle>
                 <span uk-navbar-toggle-icon></span>
                 <span class="uk-margin-small-left"></span>
             </a>
         </div>
     </nav>
+</div>
+<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 </div>
 <% if (positions.article) { %>
     <div uk-grid class="uk-background-default uk-margin-remove uk-padding">
