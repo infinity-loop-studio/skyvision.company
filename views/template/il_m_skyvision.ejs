@@ -18,6 +18,18 @@
         </div>
     </nav>
 </div>
+<% if (positions.article) { %>
+    <div uk-grid class="uk-background-default uk-margin-remove uk-padding">
+        <article class="uk-width-expand@l uk-first-column uk-padding-remove-left uk-article">
+            <%- positions.article %>
+        </article>
+        <% if (positions.sidebarright) { %>
+            <div class="uk-width-1-3@l">
+                <%- positions.sidebarright %>
+            </div>
+        <% } %>
+    </div>
+<% } %>
 <% if (positions.section1){for (var i = 0; i < positions.section1.length; i++ ){ %>
     <%- positions.section1[i] %>
 <% }} %>
