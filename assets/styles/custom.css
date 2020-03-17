@@ -195,3 +195,78 @@ dt {
 .custom-background-2 {
   background: #ffca02 !important;
 }
+
+#mobile-sidebar-menu .uk-offcanvas-bar {
+  background: white !important;
+}
+
+#mobile-sidebar-menu ul {
+  padding: 0;
+}
+
+#sidebarmenu > li > ul > li > ul > li > span {
+  padding-bottom: 10px;
+  display: block;
+  color: #222;
+  font-weight: bold;
+}
+
+#sidebarmenu > li > ul > li > ul > li > a {
+  padding-bottom: 10px;
+  display: block;
+  color: #222;
+  font-weight: bold;
+}
+
+#sidebarmenu > li > ul {
+  padding-left: 20px;
+}
+
+#sidebarmenu > li > a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+#sidebarmenu > li > span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+#sidebarmenu > li > ul > li > a {
+  font-size: 16px;
+  color: #f0506e;
+  font-weight: bold;
+  display: block;
+}
+
+#sidebarmenu > li > ul > li > ul {
+  padding-left: 20px;
+  border-left: 3px solid #ffca02;
+}
+
+#sidebarmenu > li > ul >li > ul > li > ul {
+  padding-left: 20px;
+  border-left: 3px solid #e6e6e6;
+}
+
+#mobile-sidebar-menu span:last-child {
+  font-weight: normal;
+  color: #222;
+}
+
+#sidebarmenu > li > ul > li > ul > li > ul > li > a {
+  color: #222;
+}
+
+ul#sidebarmenu * {
+  list-style: none;
+}
+
+@media (max-width: 1299px) {
+
+  #homepage-services-section {
+    padding: 20px 0;
+  }
+}

@@ -5709,6 +5709,7 @@ ul.uk-nav-sub {
 .uk-offcanvas-reveal .uk-offcanvas-bar {
   /* 4 */
   left: 0;
+  width: 100vw;
 }
 .uk-offcanvas-flip .uk-offcanvas-reveal .uk-offcanvas-bar {
   /* 4 */
@@ -5716,7 +5717,7 @@ ul.uk-nav-sub {
   right: 0;
 }
 .uk-open > .uk-offcanvas-reveal {
-  width: 270px;
+  width: 100vw !important;
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
@@ -10881,7 +10882,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-close,
 .uk-overlay-primary .uk-close,
 .uk-offcanvas-bar .uk-close {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(27, 27, 27, 0.5);
 }
 .uk-light .uk-close:hover,
 .uk-light .uk-close:focus,

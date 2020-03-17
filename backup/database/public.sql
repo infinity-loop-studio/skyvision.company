@@ -1,18 +1,18 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost_5432
+ Source Server         : server21.infinityloop.studio (postgre)
  Source Server Type    : PostgreSQL
- Source Server Version : 120002
- Source Host           : localhost:5432
+ Source Server Version : 110007
+ Source Host           : 185.67.3.93:5432
  Source Catalog        : skyvision.company
  Source Schema         : public
 
  Target Server Type    : PostgreSQL
- Target Server Version : 120002
+ Target Server Version : 110007
  File Encoding         : 65001
 
- Date: 10/03/2020 07:13:56
+ Date: 14/03/2020 23:39:58
 */
 
 
@@ -159,6 +159,160 @@ CREATE TABLE "public"."customhtml" (
 -- ----------------------------
 -- Records of customhtml
 -- ----------------------------
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 1, '<div id="homepage-services-section" class="uk-margin-remove uk-position-relative uk-background-default">
+  <h1 class="uk-text-center">Услуги</h1>
+  <p class="uk-text-center">Весь ассортимент нашей компании</p>
+  <div uk-grid="" class="uk-child-width-1-3@l uk-child-width-1-1@s uk-child-width-1-2@m uk-grid uk-padding uk-grid">
+    <div class="uk-first-column">
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <a class="background-color-unset" href="/ru/телевидение">
+              <img class="border-c" src="/images/mainpage/services/television.jpg" alt="">
+            </a>
+            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>-->
+          </div>
+        </div>
+        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
+          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/телевидение">Телевидение</a></h3>
+          <p>
+            <a class="background-color-unset" href="/ru/подключение-и-настройка-спутникового-телевидения">1. Спутниковое ТВ</a> |
+            <a class="background-color-unset" href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">2. Эфирное ТВ (Т2)</a> |
+            <a class="background-color-unset" href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">3. Спутниковое + эфирное</a> |
+            <a class="background-color-unset" href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">4. IPTV (OTT)</a> |
+            <a class="background-color-unset" href="/ru/подключение-и-настройка-viasat">5. Viasat</a> |
+            <a class="background-color-unset" href="/ru/подключение-и-настройка-extra-tv">6. Extra TV</a>
+          </p>
+          <a href="/ru/телевидение" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
+            <a class="background-color-unset" href="/ru/интернет">
+              <img class="border-c" src="/images/mainpage/services/internet.jpg" alt="">
+            </a>
+            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>-->
+          </div>
+        </div>
+        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
+          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/интернет">Интерент</a></h3>
+          <p>
+            <a class="background-color-unset" href="/ru/подключение-и-настройка-спутникового-интернета">1. Спутниковый</a> |
+            <a class="background-color-unset" href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">2. Мобильный 3G и 4G</a> |
+            <a class="background-color-unset" href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">3. Усиление 3G, 4G и GSM сигнала</a>
+          </p>
+          <a href="/ru/интернет" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
+            <a class="background-color-unset" href="/ru/видеонаблюдение">
+              <img class="border-c" src="/images/mainpage/services/monitoring.jpg" alt="">
+            </a>
+            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>-->
+          </div>
+        </div>
+        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
+          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/видеонаблюдение">Видео наблюдение</a></h3>
+          <p>
+            <a class="background-color-unset" href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#проводные">1. Проводное</a> |
+            <a class="background-color-unset" href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#безпроводные">2. Беспроводное</a> |
+            <a class="background-color-unset" href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#комбинированные">3. Комбинированное</a> |
+            <a class="background-color-unset" href="/ru/модернизация-настройка-и-ремонт-систем-видеонаблюдения">4. Модернизация, настройка и ремонт видеонаблюдения</a>
+          </p>
+          <a href="/ru/видеонаблюдение" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-grid-margin uk-first-column">
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
+            <a class="background-color-unset" href="/ru/домофонные-системы">
+              <img class="border-c" src="/images/mainpage/services/intercom.jpg" alt="">
+            </a>
+            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>-->
+          </div>
+        </div>
+        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
+          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/домофонные-системы">Домофонные системы</a></h3>
+          <p>Установка домофонной системы, дома и на предриятии.</p>
+          <a href="/ru/домофонные-системы" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-grid-margin">
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
+            <a class="background-color-unset" href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">
+              <img class="border-c" src="/images/mainpage/services/amplifier.jpg" alt="">
+            </a>
+            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>-->
+          </div>
+        </div>
+        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
+          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">Усиление 3G, 4G и GSM</a></h3>
+          <p>Усиление сигнала мобильного опреатора.</p>
+          <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-grid-margin">
+      <div class="uk-card">
+        <div class="uk-card-media-top">
+          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
+            <a class="background-color-unset" href="/ru/корпоративное-компьютерное-обслуживание">
+              <img class="border-c" src="/images/mainpage/services/pc.jpg" alt="">
+            </a>
+            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
+              <p class="uk-h4 uk-margin-remove">
+                <button class="uk-button uk-button-danger">Заказать</button>
+              </p>
+            </div>-->
+          </div>
+        </div>
+        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
+          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/корпоративное-компьютерное-обслуживание">Обслуживание ПК</a></h3>
+          <p>Настройка и обслуживание компьютерной техники.</p>
+          <a href="/ru/корпоративное-компьютерное-обслуживание" class="uk-button uk-button-secondary">Перейти в раздел</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+', 5);
 INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 2, '<div id="homepage-article-section" class="uk-light uk-child-width-1-2@l uk-child-width-1-1@s uk-grid-match uk-grid-column-collapse uk-position-relative uk-background-default uk-grid" uk-grid="">
   <div class="background-primary uk-padding-large uk-height-large uk-first-column">
     <p class="uk-text-lead">
@@ -261,6 +415,34 @@ INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 5, '<div
     </div>
   </div>
 </div>', 9);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 29, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Divan TV</h1>
+    
+    
+    
+    
+  </div>
+</div>', 33);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 31, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Демонтаж спутниковой антены</h1>
+    
+    
+    
+    
+  </div>
+</div>', 35);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 45, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Усиление 3G, 4G и GSM сигнала операторов<br>
+мобильной связи Kyivstar, Life Cell и Vodafone</h1>
+    
+    
+    
+    
+  </div>
+</div>', 49);
 INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 6, '<div id="homepage-reviews-container-section" uk-grid="" class="uk-grid uk-grid-stack uk-grid-small">
   <div class="uk-width-1-1@l uk-first-column">
     <div uk-slideshow="animation: slide; autoplay: false; autoplay-interval: 5000" class="uk-slideshow">
@@ -281,21 +463,6 @@ INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 6, '<div
     </div>
   </div>
 </div>', 10);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 51, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Контакты</h1>
-    
-    
-    
-    
-  </div>
-</div>', 55);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 50, ' <div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 54);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 52, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 56);
 INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 7, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
   <div class="uk-width-1-1@l uk-padding uk-first-column">
     <h1 class="uk-margin-small page-header">Телевидение</h1>
@@ -330,6 +497,94 @@ INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 7, '<div
   </div>
 </div>
 ', 11);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 8, '<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+  <a href="/ru/подключение-и-настройка-спутникового-телевидения">
+    <img src="/images/television/articles/article-1.webp">
+  </a>
+</div>
+<h2 class="uk-margin-small-top">
+  <a href="/ru/подключение-и-настройка-спутникового-телевидения">
+    Подключение и настройка спутникового телевидения
+  </a>
+</h2>
+<p></p>
+<a href="/ru/подключение-и-настройка-спутникового-телевидения" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">
+    <img src="/images/no-image.jpg">
+  </a>
+</div>
+<h2 class="uk-margin-small-top">
+  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">
+    Подключение и настройка цифрового эфирного телевидения (Т2)
+  </a>
+</h2>
+<p></p>
+<a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+  <a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">
+    <img src="/images/no-image.jpg">
+  </a>
+</div>
+<h2 class="uk-margin-small-top">
+  <a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">
+    Подключение и настройка комбинированного (спутникового и эфирного Т2) телевидения
+  </a>
+</h2>
+<p></p>
+<a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">
+    <img src="/images/no-image.jpg">
+  </a>
+</div>
+<h2 class="uk-margin-small-top">
+  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">
+    Подключение и настройка интернет телевидения (IPTV, OTT)
+  </a>
+</h2>
+<p></p>
+<a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+  <a href="/ru/подключение-и-настройка-viasat">
+    <img src="/images/no-image.jpg">
+  </a>
+</div>
+<h2 class="uk-margin-small-top">
+  <a href="/ru/подключение-и-настройка-viasat">
+    Подключение и настройка Viasat
+  </a>
+</h2>
+<p></p>
+<a href="/ru/подключение-и-настройка-viasat" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+  <a href="/ru/подключение-и-настройка-extra-tv">
+    <img src="/images/no-image.jpg">
+  </a>
+</div>
+<h2 class="uk-margin-small-top">
+  <a href="/ru/подключение-и-настройка-extra-tv">
+    Подключение и настройка Extra TV
+  </a>
+</h2>
+<p></p>
+<a href="/ru/подключение-и-настройка-extra-tv" class="uk-button uk-button-secondary">Читать материал</a>
+<hr class="uk-divider-icon">
+
+<img src="/images/no-image.jpg">
+<h2 class="uk-margin-small-top">Демонтаж спутниковой антены</h2>
+<p></p>
+', 12);
 INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 9, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
   <div class="uk-width-1-1@l uk-padding uk-first-column">
     <h1 class="uk-margin-small page-header">Подключение и настройка<br>
@@ -11958,6 +12213,9 @@ Extra TV</h1>
     
   </div>
 </div>', 21);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 18, ' <div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 22);
 INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 19, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
   <div class="uk-width-1-1@l uk-padding uk-first-column">
     <h1 class="uk-margin-small page-header">Модернизация,настройка и<br>
@@ -11968,6 +12226,9 @@ INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 19, '<di
     
   </div>
 </div>', 23);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 20, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 24);
 INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 21, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
   <div class="uk-width-1-1@l uk-padding uk-first-column">
     <h1 class="uk-margin-small page-header">Ремонт, настройка и прошивка<br>
@@ -12006,32 +12267,6 @@ INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 27, '<di
     
   </div>
 </div>', 31);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 29, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Divan TV</h1>
-    
-    
-    
-    
-  </div>
-</div>', 33);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 31, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Демонтаж спутниковой антены</h1>
-    
-    
-    
-    
-  </div>
-</div>', 35);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 53, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">  <div class="uk-width-1-1@l uk-padding uk-first-column">    <h1 class="uk-margin-small page-header">Подключение и настройка комбинированного (эфирного и спутникового) телевидения</h1>                  </div></div>', 57);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 54, '<h2>Цены</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ (Спутниковая + пассивная эфирная антена + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower"></i></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 2900 - 3150 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется пассивная антена для одного телевизора. Для обеспечения уверенного приёма и качественной картинки  растояние между эфирной вышкой и приёмной антеной Т2 должно быть <span    class="red-color uk-text-bold">не больше 20 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ (Спутниковая + активная эфирная антена с усилителем + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower red-color"></i></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 3000 - 3250 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется антена с усилителем для одного телевизора. Для обеспечения уверенного приёма и качественной  картинки растояние между эфирной вышкой и приёмной антеной Т2 должно быть <span    class="red-color uk-text-bold">не  больше  40 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ(Спутниковая + пассивная эфирная антена + внешний усилитель + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower"></i> + <span class="red-color">УСИЛИТЕЛЬ</span></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 3400 - 3650 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется пасивная антена с внешним усилителем для одного телевизора. Для обеспечения уверенного приёма и  качественной картинки растояние между эфирной вышкой и приёмной антеной Т2 должно  быть <span class="red-color uk-text-bold">не больше 80 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><table class="uk-table uk-table-hover uk-table-middle uk-table-divider">  <thead>  <tr>    <th>Комплект на</th>    <th class="uk-width-small">Цена</th>    <th class="uk-table-shrink uk-text-nowrap"></th>  </tr>  </thead>  <tbody>  <tr>    <td>2 ТВ</td>    <td class="uk-text-truncate">4900 - 5300 грн.</td>  </tr>  <tr>    <td>3 ТВ</td>    <td class="uk-text-truncate">5800 - 6200 грн.</td>  </tr>  <tr>    <td>4 ТВ</td>    <td class="uk-text-truncate">6600 - 7000 грн.</td>  </tr>  <tr>    <td>5 ТВ</td>    <td class="uk-text-truncate">7400 - 7800 грн.</td>  </tr>  </tbody></table><hr class="uk-divider-icon"><h2>Что входит в указанную стоимость</h2><dl class="uk-description-list uk-description-list-divider">  <dt>Выезд мастера</dt>  <dd>После того как вы согласуете все детали вашего подключения по телефону, наш мастер выедет к вам на объект.</dd>  <dt>Оборудование</dt>  <dd>Комплектация зависит от : 1. Растояния между вышкой и местом монтажа антены, высоты на которой будет размещена антена, окружающей среды и наличия других радио устройств.    Комплект по самой низкой цене является опциональным и применяется в тех местах где уселение не нужно и качество сигнала высокое. В большинстве случаев используется комплектация    с усилителем сигнала. <span class="red-color">Эти условия не относится к подключению спутниковой антены</span>.  </dd>  <dt>Монтаж и настройка</dt>  <dd>Собрав всю необходимую информацию о подключении, наш мастер, со всем необходимым оборудованием для подключения комбинированного спутиникового + эфирного (DVB-T2) телевидения,    приедет к вам на объект. После    чего он осуществит монтаж антен и их настройку. Далее монтажник отведёт нужное количество кабеля до места размещения телевизора. Окончательным этапом является подключение    тюнера и его настройка.  </dd></dl><hr class="uk-divider-icon"><h2>Дополнительная информация</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения без абонентской платы</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-спутникового-телевидения">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка спутникового телевидения    </li>  </a>  <p class="uk-text-meta uk-margin-remove">* В данном подключении с 20.01.2020 г. не будет основных украинских каналов</p>  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">    <li class="uk-padding-small uk-padding-remove-left uk-padding-remove-bottom"><i class="fas fa-external-link-alt"></i> Подключение и настройка цифрового эфирного телевидения      (DVB-T2)    </li>  </a></ul><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения всех каналов c абонентской платой</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-viasat">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка Viasat</li>  </a>  <a href="/ru/лючение-и-настройка-extra-tv">    <li class="uk-padding-small uk-padding-remove-left"><i class="fas fa-external-link-alt"></i> Подключение и настройка Extra TV</li>  </a>  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">    <li><i class="fas fa-external-link-alt"></i>Подключение и настройка интернет телевидения (IPTV, OTT)</li>  </a></ul>', 58);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 18, ' <div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 22);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 20, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 24);
 INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 33, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
   <div class="uk-width-1-1@l uk-padding uk-first-column">
     <h1 class="uk-margin-small page-header">Видеонаблюдение</h1>
@@ -12065,323 +12300,6 @@ INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 33, '<di
     </p>
   </div>
 </div>', 37);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 35, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Проектирование и монтаж<br>
-систем видеонаблюдения</h1>
-    
-    
-    
-    
-  </div>
-</div>', 39);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 37, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Модернизация, настройка и ремонт<br>
-систем видеонаблюдения</h1>
-    
-    
-    
-    
-  </div>
-</div>', 41);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 39, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Интернет</h1>
-    <p class="header-separator uk-margin-remove">Подключение и настройка:</p>
-    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
-      <a href="/ru/подключение-и-настройка-спутникового-интернета">Cпутникового интернета</a>
-      <span class="header-separator direct-slash-separator"> | </span>
-      <a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">3G и 4G интернета операторов мобильной связи Kyivstar, Life Cell и Vodafone</a>
-      
-      
-      
-      
-      
-      
-    </p>
-    <p class="header-separator uk-margin-remove-bottom">Дополнительные услуги: </p>
-    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
-      <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">Усиление 3G, 4G и GSM сигнала операторов мобильной связи Kyivstar, Life Cell и Vodafone</a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </p>
-  </div>
-</div>', 43);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 41, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Подключение и настройка<br>
-спутникового интернета</h1>
-    
-    
-    
-    
-  </div>
-</div>', 45);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 43, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Подключение и настройка 3G и 4G интернета <br>
-операторов мобильной связи Kyivstar, Life Cell и Vodafone</h1>
-    
-    
-    
-    
-  </div>
-</div>', 47);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 45, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Усиление 3G, 4G и GSM сигнала операторов<br>
-мобильной связи Kyivstar, Life Cell и Vodafone</h1>
-    
-    
-    
-    
-  </div>
-</div>', 49);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 47, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Домофонные системы</h1>
-    
-    
-    
-    
-  </div>
-</div>', 51);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 49, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
-  <div class="uk-width-1-1@l uk-padding uk-first-column">
-    <h1 class="uk-margin-small page-header">Обслуживание ПК</h1>
-    
-    
-    
-    
-  </div>
-</div>', 53);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 42, ' <div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 46);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 44, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 48);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 46, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 50);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 40, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>
-
-<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
-  <a href="/ru/подключение-и-настройка-спутникового-интернета">
-    <img src="/images/no-image.jpg">
-  </a>
-</div>
-<h2 class="uk-margin-small-top"><a href="/ru/подключение-и-настройка-спутникового-интернета">Подключение и настройка спутникового интернета</a></h2>
-<p></p>
-<a href="/ru/подключение-и-настройка-спутникового-интернета" class="uk-button uk-button-secondary">Читать материал</a>
-<hr class="uk-divider-icon">
-
-<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
-  <a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">
-    <img src="/images/no-image.jpg">
-  </a>
-</div>
-<h2 class="uk-margin-small-top">
-  <a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">
-    Подключение и настройка 3G и 4G интернета операторов мобильной связи Kyivstar, Life Cell и Vodafone
-  </a>
-</h2>
-<p></p>
-<a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone" class="uk-button uk-button-secondary">Читать материал</a>
-<hr class="uk-divider-icon">
-
-<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
-  <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">
-    <img src="/images/no-image.jpg">
-  </a>
-</div>
-<h2 class="uk-margin-small-top">
-  <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">
-    Усиление 3G, 4G и GSM сигнала операторов мобильной связи Kyivstar, Life Cell и Vodafone
-  </a>
-</h2>
-<p></p>
-<a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone" class="uk-button uk-button-secondary">Читать материал</a>
-', 44);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 1, '<div id="homepage-services-section" class="uk-margin-remove uk-position-relative uk-background-default">
-  <h1 class="uk-text-center">Услуги</h1>
-  <p class="uk-text-center">Весь ассортимент нашей компании</p>
-  <div uk-grid="" class="uk-child-width-1-3@l uk-child-width-1-1@s uk-child-width-1-2@m uk-grid uk-padding uk-grid">
-    <div class="uk-first-column">
-      <div class="uk-card">
-        <div class="uk-card-media-top">
-          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-            <a class="background-color-unset" href="/ru/телевидение">
-              <img class="border-c" src="/images/mainpage/services/television.jpg" alt="">
-            </a>
-            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
-              <p class="uk-h4 uk-margin-remove">
-                <button class="uk-button uk-button-danger">Заказать</button>
-              </p>
-            </div>-->
-          </div>
-        </div>
-        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
-          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/телевидение">Телевидение</a></h3>
-          <p>
-            <a class="background-color-unset" href="/ru/подключение-и-настройка-спутникового-телевидения">1. Спутниковое ТВ</a> |
-            <a class="background-color-unset" href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">2. Эфирное ТВ (Т2)</a> |
-            <a class="background-color-unset" href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">3. Спутниковое + эфирное</a> |
-            <a class="background-color-unset" href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">4. IPTV (OTT)</a> |
-            <a class="background-color-unset" href="/ru/подключение-и-настройка-viasat">5. Viasat</a> |
-            <a class="background-color-unset" href="/ru/подключение-и-настройка-extra-tv">6. Extra TV</a>
-          </p>
-          <a href="/ru/телевидение" class="uk-button uk-button-secondary">Перейти в раздел</a>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card">
-        <div class="uk-card-media-top">
-          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
-            <a class="background-color-unset" href="/ru/интернет">
-              <img class="border-c" src="/images/mainpage/services/internet.jpg" alt="">
-            </a>
-            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
-              <p class="uk-h4 uk-margin-remove">
-                <button class="uk-button uk-button-danger">Заказать</button>
-              </p>
-            </div>-->
-          </div>
-        </div>
-        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
-          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/интернет">Интерент</a></h3>
-          <p>
-            <a class="background-color-unset" href="/ru/подключение-и-настройка-спутникового-интернета">1. Спутниковый</a> |
-            <a class="background-color-unset" href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">2. Мобильный 3G и 4G</a> |
-            <a class="background-color-unset" href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">3. Усиление 3G, 4G и GSM сигнала</a>
-          </p>
-          <a href="/ru/интернет" class="uk-button uk-button-secondary">Перейти в раздел</a>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card">
-        <div class="uk-card-media-top">
-          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
-            <a class="background-color-unset" href="/ru/видеонаблюдение">
-              <img class="border-c" src="/images/mainpage/services/monitoring.jpg" alt="">
-            </a>
-            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
-              <p class="uk-h4 uk-margin-remove">
-                <button class="uk-button uk-button-danger">Заказать</button>
-              </p>
-            </div>-->
-          </div>
-        </div>
-        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
-          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/видеонаблюдение">Видео наблюдение</a></h3>
-          <p>
-            <a class="background-color-unset" href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#проводные">1. Проводное</a> |
-            <a class="background-color-unset" href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#безпроводные">2. Беспроводное</a> |
-            <a class="background-color-unset" href="/ru/проектирование-и-монтаж-систем-видеонаблюдения#комбинированные">3. Комбинированное</a> |
-            <a class="background-color-unset" href="/ru/модернизация-настройка-и-ремонт-систем-видеонаблюдения">4. Модернизация, настройка и ремонт видеонаблюдения</a>
-          </p>
-          <a href="/ru/видеонаблюдение" class="uk-button uk-button-secondary">Перейти в раздел</a>
-        </div>
-      </div>
-    </div>
-    <div class="uk-grid-margin uk-first-column">
-      <div class="uk-card">
-        <div class="uk-card-media-top">
-          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
-            <a class="background-color-unset" href="/ru/домофонные-системы">
-              <img class="border-c" src="/images/mainpage/services/intercom.jpg" alt="">
-            </a>
-            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
-              <p class="uk-h4 uk-margin-remove">
-                <button class="uk-button uk-button-danger">Заказать</button>
-              </p>
-            </div>-->
-          </div>
-        </div>
-        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
-          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/домофонные-системы">Домофонные системы</a></h3>
-          <p>Установка домофонной системы, дома и на предриятии.</p>
-          <a href="/ru/домофонные-системы" class="uk-button uk-button-secondary">Перейти в раздел</a>
-        </div>
-      </div>
-    </div>
-    <div class="uk-grid-margin">
-      <div class="uk-card">
-        <div class="uk-card-media-top">
-          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
-            <a class="background-color-unset" href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">
-              <img class="border-c" src="/images/mainpage/services/amplifier.jpg" alt="">
-            </a>
-            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
-              <p class="uk-h4 uk-margin-remove">
-                <button class="uk-button uk-button-danger">Заказать</button>
-              </p>
-            </div>-->
-          </div>
-        </div>
-        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
-          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">Усиление 3G, 4G и GSM</a></h3>
-          <p>Усиление сигнала мобильного опреатора.</p>
-          <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone" class="uk-button uk-button-secondary">Перейти в раздел</a>
-        </div>
-      </div>
-    </div>
-    <div class="uk-grid-margin">
-      <div class="uk-card">
-        <div class="uk-card-media-top">
-          <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-            <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
-            <a class="background-color-unset" href="/ru/корпоративное-компьютерное-обслуживание">
-              <img class="border-c" src="/images/mainpage/services/pc.jpg" alt="">
-            </a>
-            <!--<div class="uk-transition-slide-left uk-position-cover uk-overlay custom-overlay-1 uk-flex uk-flex-center uk-flex-middle uk-width-1-1@l">
-              <p class="uk-h4 uk-margin-remove">
-                <button class="uk-button uk-button-danger">Заказать</button>
-              </p>
-            </div>-->
-          </div>
-        </div>
-        <div class="uk-card-body uk-padding-remove-left uk-padding-remove-right">
-          <h3 class="uk-card-title"><a class="background-color-unset" href="/ru/корпоративное-компьютерное-обслуживание">Обслуживание ПК</a></h3>
-          <p>Настройка и обслуживание компьютерной техники.</p>
-          <a href="/ru/корпоративное-компьютерное-обслуживание" class="uk-button uk-button-secondary">Перейти в раздел</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-', 5);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 36, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 40);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 38, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 42);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 48, ' <div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
-  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
-</div>', 52);
 INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 34, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
   <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
 </div>
@@ -12445,94 +12363,176 @@ INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 34, '<di
 <p></p>
 <a href="/ru/модернизация-настройка-и-ремонт-систем-видеонаблюдения" class="uk-button uk-button-secondary">Читать материал</a>
 ', 38);
-INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 8, '<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <a href="/ru/подключение-и-настройка-спутникового-телевидения">
-    <img src="/images/television/articles/article-1.webp">
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 35, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Проектирование и монтаж<br>
+систем видеонаблюдения</h1>
+    
+    
+    
+    
+  </div>
+</div>', 39);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 36, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 40);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 37, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Модернизация, настройка и ремонт<br>
+систем видеонаблюдения</h1>
+    
+    
+    
+    
+  </div>
+</div>', 41);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 38, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 42);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 39, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Интернет</h1>
+    <p class="header-separator uk-margin-remove">Подключение и настройка:</p>
+    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
+      <a href="/ru/подключение-и-настройка-спутникового-интернета">Cпутникового интернета</a>
+      <span class="header-separator direct-slash-separator"> | </span>
+      <a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">3G и 4G интернета операторов мобильной связи Kyivstar, Life Cell и Vodafone</a>
+      
+      
+      
+      
+      
+      
+    </p>
+    <p class="header-separator uk-margin-remove-bottom">Дополнительные услуги: </p>
+    <p class="uk-margin-remove-top uk-margin-remove-bottom text-white uk-text-meta">
+      <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">Усиление 3G, 4G и GSM сигнала операторов мобильной связи Kyivstar, Life Cell и Vodafone</a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </p>
+  </div>
+</div>', 43);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 40, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>
+
+<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+  <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
+  <a href="/ru/подключение-и-настройка-спутникового-интернета">
+    <img src="/images/no-image.jpg">
   </a>
 </div>
-<h2 class="uk-margin-small-top">
-  <a href="/ru/подключение-и-настройка-спутникового-телевидения">
-    Подключение и настройка спутникового телевидения
-  </a>
-</h2>
+<h2 class="uk-margin-small-top"><a href="/ru/подключение-и-настройка-спутникового-интернета">Подключение и настройка спутникового интернета</a></h2>
 <p></p>
-<a href="/ru/подключение-и-настройка-спутникового-телевидения" class="uk-button uk-button-secondary">Читать материал</a>
+<a href="/ru/подключение-и-настройка-спутникового-интернета" class="uk-button uk-button-secondary">Читать материал</a>
 <hr class="uk-divider-icon">
 
 <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">
+  <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
+  <a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">
     <img src="/images/no-image.jpg">
   </a>
 </div>
 <h2 class="uk-margin-small-top">
-  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">
-    Подключение и настройка цифрового эфирного телевидения (Т2)
+  <a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone">
+    Подключение и настройка 3G и 4G интернета операторов мобильной связи Kyivstar, Life Cell и Vodafone
   </a>
 </h2>
 <p></p>
-<a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2" class="uk-button uk-button-secondary">Читать материал</a>
+<a href="/ru/подключение-и-настройка-3g-и-4g-интернета-операторов-мобильной-связи-Kyivstar-Life-Cell-и-Vodafone" class="uk-button uk-button-secondary">Читать материал</a>
 <hr class="uk-divider-icon">
 
 <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">
+  <span class="uk-label uk-position-top-right uk-position-small custom-background-1">Раздел в разработке</span>
+  <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">
     <img src="/images/no-image.jpg">
   </a>
 </div>
 <h2 class="uk-margin-small-top">
-  <a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения">
-    Подключение и настройка комбинированного (спутникового и эфирного Т2) телевидения
+  <a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone">
+    Усиление 3G, 4G и GSM сигнала операторов мобильной связи Kyivstar, Life Cell и Vodafone
   </a>
 </h2>
 <p></p>
-<a href="/ru/подключение-и-настройка-комбинированного-спутникового-и-эфирного-т2-телевидения" class="uk-button uk-button-secondary">Читать материал</a>
-<hr class="uk-divider-icon">
-
-<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">
-    <img src="/images/no-image.jpg">
-  </a>
-</div>
-<h2 class="uk-margin-small-top">
-  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">
-    Подключение и настройка интернет телевидения (IPTV, OTT)
-  </a>
-</h2>
-<p></p>
-<a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott" class="uk-button uk-button-secondary">Читать материал</a>
-<hr class="uk-divider-icon">
-
-<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <a href="/ru/подключение-и-настройка-viasat">
-    <img src="/images/no-image.jpg">
-  </a>
-</div>
-<h2 class="uk-margin-small-top">
-  <a href="/ru/подключение-и-настройка-viasat">
-    Подключение и настройка Viasat
-  </a>
-</h2>
-<p></p>
-<a href="/ru/подключение-и-настройка-viasat" class="uk-button uk-button-secondary">Читать материал</a>
-<hr class="uk-divider-icon">
-
-<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-  <a href="/ru/подключение-и-настройка-extra-tv">
-    <img src="/images/no-image.jpg">
-  </a>
-</div>
-<h2 class="uk-margin-small-top">
-  <a href="/ru/подключение-и-настройка-extra-tv">
-    Подключение и настройка Extra TV
-  </a>
-</h2>
-<p></p>
-<a href="/ru/подключение-и-настройка-extra-tv" class="uk-button uk-button-secondary">Читать материал</a>
-<hr class="uk-divider-icon">
-
-<img src="/images/no-image.jpg">
-<h2 class="uk-margin-small-top">Демонтаж спутниковой антены</h2>
-<p></p>
-', 12);
+<a href="/ru/усиление-3g-4g-и-gsm-сигнала-операторов-мобильной-связи-kyivstar-life-cell-и-vodafone" class="uk-button uk-button-secondary">Читать материал</a>
+', 44);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 41, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка<br>
+спутникового интернета</h1>
+    
+    
+    
+    
+  </div>
+</div>', 45);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 42, ' <div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 46);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 43, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Подключение и настройка 3G и 4G интернета <br>
+операторов мобильной связи Kyivstar, Life Cell и Vodafone</h1>
+    
+    
+    
+    
+  </div>
+</div>', 47);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 44, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 48);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 46, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 50);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 47, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Домофонные системы</h1>
+    
+    
+    
+    
+  </div>
+</div>', 51);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 48, ' <div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 52);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 49, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Обслуживание ПК</h1>
+    
+    
+    
+    
+  </div>
+</div>', 53);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 50, ' <div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 54);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 51, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">
+  <div class="uk-width-1-1@l uk-padding uk-first-column">
+    <h1 class="uk-margin-small page-header">Контакты</h1>
+    
+    
+    
+    
+  </div>
+</div>', 55);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 52, '<div class="uk-text-bold uk-alert-danger uk-alert" uk-alert="">
+  <p>Скоро тут появится вся необходимая информация. Звоните нам, и мы ответим на все вопросы.</p>
+</div>', 56);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 53, '<div id="televisionpage-header-section" uk-grid="" class="uk-grid uk-grid-stack uk-light">  <div class="uk-width-1-1@l uk-padding uk-first-column">    <h1 class="uk-margin-small page-header">Подключение и настройка комбинированного (эфирного и спутникового) телевидения</h1>                  </div></div>', 57);
+INSERT INTO "public"."customhtml" VALUES (1571154569061, 1571154569061, 54, '<h2>Цены</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ (Спутниковая + пассивная эфирная антена + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower"></i></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 2900 - 3150 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется пассивная антена для одного телевизора. Для обеспечения уверенного приёма и качественной картинки  растояние между эфирной вышкой и приёмной антеной Т2 должно быть <span    class="red-color uk-text-bold">не больше 20 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ (Спутниковая + активная эфирная антена с усилителем + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower red-color"></i></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 3000 - 3250 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется антена с усилителем для одного телевизора. Для обеспечения уверенного приёма и качественной  картинки растояние между эфирной вышкой и приёмной антеной Т2 должно быть <span    class="red-color uk-text-bold">не  больше  40 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><h3 class="red-color uk-text-bold uk-text-uppercase">Комплект на 1ТВ(Спутниковая + пассивная эфирная антена + внешний усилитель + комбинированный тюнер)</h3><div class="uk-grid-small" uk-grid>  <div class="uk-width-expand" uk-leader><i class="fas fa-satellite-dish"></i> + <i class="fas fa-broadcast-tower"></i> + <span class="red-color">УСИЛИТЕЛЬ</span></div>  <div class="uk-width-1-5" uk-leader><i class="fas fa-tv"></i></div>  <div class="uk-width-1-4">Цена: 3400 - 3650 грн.</i></div></div><p class="uk-text-meta uk-margin-small-top">* В данной комплектации используется пасивная антена с внешним усилителем для одного телевизора. Для обеспечения уверенного приёма и  качественной картинки растояние между эфирной вышкой и приёмной антеной Т2 должно  быть <span class="red-color uk-text-bold">не больше 80 км</span>. В комплекте идёт 10 метров коаксиального кабеля.</p><table class="uk-table uk-table-hover uk-table-middle uk-table-divider">  <thead>  <tr>    <th>Комплект на</th>    <th class="uk-width-small">Цена</th>    <th class="uk-table-shrink uk-text-nowrap"></th>  </tr>  </thead>  <tbody>  <tr>    <td>2 ТВ</td>    <td class="uk-text-truncate">4900 - 5300 грн.</td>  </tr>  <tr>    <td>3 ТВ</td>    <td class="uk-text-truncate">5800 - 6200 грн.</td>  </tr>  <tr>    <td>4 ТВ</td>    <td class="uk-text-truncate">6600 - 7000 грн.</td>  </tr>  <tr>    <td>5 ТВ</td>    <td class="uk-text-truncate">7400 - 7800 грн.</td>  </tr>  </tbody></table><hr class="uk-divider-icon"><h2>Что входит в указанную стоимость</h2><dl class="uk-description-list uk-description-list-divider">  <dt>Выезд мастера</dt>  <dd>После того как вы согласуете все детали вашего подключения по телефону, наш мастер выедет к вам на объект.</dd>  <dt>Оборудование</dt>  <dd>Комплектация зависит от : 1. Растояния между вышкой и местом монтажа антены, высоты на которой будет размещена антена, окружающей среды и наличия других радио устройств.    Комплект по самой низкой цене является опциональным и применяется в тех местах где уселение не нужно и качество сигнала высокое. В большинстве случаев используется комплектация    с усилителем сигнала. <span class="red-color">Эти условия не относится к подключению спутниковой антены</span>.  </dd>  <dt>Монтаж и настройка</dt>  <dd>Собрав всю необходимую информацию о подключении, наш мастер, со всем необходимым оборудованием для подключения комбинированного спутиникового + эфирного (DVB-T2) телевидения,    приедет к вам на объект. После    чего он осуществит монтаж антен и их настройку. Далее монтажник отведёт нужное количество кабеля до места размещения телевизора. Окончательным этапом является подключение    тюнера и его настройка.  </dd></dl><hr class="uk-divider-icon"><h2>Дополнительная информация</h2><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения без абонентской платы</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-спутникового-телевидения">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка спутникового телевидения    </li>  </a>  <p class="uk-text-meta uk-margin-remove">* В данном подключении с 20.01.2020 г. не будет основных украинских каналов</p>  <a href="/ru/подключение-и-настройка-цифрового-эфирного-телевидения-т2">    <li class="uk-padding-small uk-padding-remove-left uk-padding-remove-bottom"><i class="fas fa-external-link-alt"></i> Подключение и настройка цифрового эфирного телевидения      (DVB-T2)    </li>  </a></ul><h3 class="red-color uk-text-bold uk-text-uppercase">Варианты подключения всех каналов c абонентской платой</h3><ul class="uk-list">  <a href="/ru/подключение-и-настройка-viasat">    <li><i class="fas fa-external-link-alt"></i> Подключение и настройка Viasat</li>  </a>  <a href="/ru/лючение-и-настройка-extra-tv">    <li class="uk-padding-small uk-padding-remove-left"><i class="fas fa-external-link-alt"></i> Подключение и настройка Extra TV</li>  </a>  <a href="/ru/подключение-и-настройка-интернет-телевидения-iptv-ott">    <li><i class="fas fa-external-link-alt"></i>Подключение и настройка интернет телевидения (IPTV, OTT)</li>  </a></ul>', 58);
 
 -- ----------------------------
 -- Table structure for customjs
@@ -12662,19 +12662,19 @@ CREATE TABLE "public"."modules" (
 -- Records of modules
 -- ----------------------------
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 1, 'mod_slideshow', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 2, 'mod_menu', 'sidebarright', '{"menuSystemName":"mainmenu","ItemsLevel":"all","style":""}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 2, 'mod_menu', 'sidebarright', '{"menuSystemName":"mainmenu","ItemsLevel":"all","style":""}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 3, 'mod_menu', 'mainmenu', '{"menuSystemName":"mainmenu","ItemsLevel":"1","style":"uk-list uk-text-center","id":"mainmenu"}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 4, 'mod_custom_js', 'javascript', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 5, 'mod_custom_html', 'section1', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 5, 'mod_custom_html', 'section1', '{}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 6, 'mod_custom_html', 'section1', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 7, 'mod_custom_html', 'section1', '{}', 1, 'f');
 INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 8, 'mod_custom_html', 'section1', '{}', 1, 'f');
 INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 9, 'mod_custom_html', 'section1', '{}', 1, 'f');
 INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 10, 'mod_custom_html', 'section1', '{}', 1, 'f');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 11, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 12, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 12, 'mod_custom_html', 'article', '{}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 13, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 14, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 14, 'mod_custom_html', 'article', '{}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 15, 'mod_custom_html', 'header', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 16, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 17, 'mod_custom_html', 'header', '{}', 1, 't');
@@ -12813,6 +12813,7 @@ INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 102, 3
 INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 103, 35, 3);
 INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 104, 35, 57);
 INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 105, 35, 58);
+INSERT INTO "public"."modulestable" VALUES (1571154569061, 1571154569061, 106, 1, 2);
 
 -- ----------------------------
 -- Table structure for slides
@@ -12922,7 +12923,7 @@ SELECT setval('"public"."modules_id_seq"', 59, true);
 -- ----------------------------
 ALTER SEQUENCE "public"."modulestable_id_seq"
 OWNED BY "public"."modulestable"."id";
-SELECT setval('"public"."modulestable_id_seq"', 106, true);
+SELECT setval('"public"."modulestable_id_seq"', 107, true);
 
 -- ----------------------------
 -- Alter sequences owned by

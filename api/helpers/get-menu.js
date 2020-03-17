@@ -32,18 +32,25 @@ module.exports = {
     style = '';
     id = '';
 
+    // SELECT MENU TABLE
     menu = await Menu.findOne({
       systemName: inputs.moduleData.params.menuSystemName
     }).populate('items', {
       sort: 'sort ASC'
     });
+
+    // GET ALL MENU ITEMS
     menuItems = menu.items;
+
+    // GET STYLE FROM
     if (inputs.moduleData.params.style !== '') {
       style = ' class="' + inputs.moduleData.params.style + '"';
     }
-    if (inputs.moduleData.params.style !== '') {
+
+    if (inputs.moduleData.params.id !== '') {
       id = ' id="' + inputs.moduleData.params.id + '"';
     }
+
     if (inputs.moduleData.params.ItemsLevel !== 'all') {
       filteredItems = [];
       for (menuItem of menuItems) {
@@ -53,6 +60,7 @@ module.exports = {
       }
       menuItems = filteredItems;
     }
+
     body += '<ul' + id + style + '>';
 
     for (menuItem of menuItems) {
