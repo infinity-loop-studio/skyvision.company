@@ -1,18 +1,18 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : server21.infinityloop.studio (postgre)
+ Source Server         : localhost_5432
  Source Server Type    : PostgreSQL
- Source Server Version : 110007
- Source Host           : 185.67.3.93:5432
+ Source Server Version : 120002
+ Source Host           : localhost:5432
  Source Catalog        : skyvision.company
  Source Schema         : public
 
  Target Server Type    : PostgreSQL
- Target Server Version : 110007
+ Target Server Version : 120002
  File Encoding         : 65001
 
- Date: 14/03/2020 23:39:58
+ Date: 17/03/2020 15:50:31
 */
 
 
@@ -12617,7 +12617,7 @@ INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 6, 'Ци�
 INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 7, 'Интернет телевидения (IPTV, OTT)', 'подключение-и-настройка-интернет-телевидения-iptv-ott', 0, 4, 8, '/ru/подключение-и-настройка-интернет-телевидения-iptv-ott', 1);
 INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 8, 'Viasat', 'подключение-и-настройка-viasat', 0, 4, 9, '/ru/подключение-и-настройка-viasat', 1);
 INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 9, 'Extra TV', 'подключение-и-настройка-extra-tv', 0, 4, 10, '/ru/подключение-и-настройка-extra-tv', 1);
-INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 10, 'Дополнительные услуги:', 'separator', 1, 3, 11, ' ', 1);
+INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 10, 'Дополнительные услуги', 'separator', 1, 3, 11, ' ', 1);
 INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 11, 'Модернизация, настройка и ремонт оборудования для спутникового, эфирного и IPTV телевидения', 'модернизация-настройка-и-ремонт-оборудования-для-спутникового-эфирного-и-iptv-телевидения', 0, 4, 12, '/ru/модернизация-настройка-и-ремонт-оборудования-для-спутникового-эфирного-и-iptv-телевидения', 1);
 INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 14, 'Megogo', 'megogo', 0, 4, 15, '/ru/подключение-и-настройка-интернет-телевидения-iptv-ott', 1);
 INSERT INTO "public"."menuitems" VALUES (1571251343191, 1571251343191, 15, 'OLL TV', 'oll-tv', 0, 4, 16, '/ru/подключение-и-настройка-интернет-телевидения-iptv-ott', 1);
@@ -12662,7 +12662,7 @@ CREATE TABLE "public"."modules" (
 -- Records of modules
 -- ----------------------------
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 1, 'mod_slideshow', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 2, 'mod_menu', 'sidebarright', '{"menuSystemName":"mainmenu","ItemsLevel":"all","style":""}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 2, 'mod_menu', 'sidebarright', '{"menuSystemName":"mainmenu","ItemsLevel":"all","id":"sidebarmenu","style":""}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 3, 'mod_menu', 'mainmenu', '{"menuSystemName":"mainmenu","ItemsLevel":"1","style":"uk-list uk-text-center","id":"mainmenu"}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 4, 'mod_custom_js', 'javascript', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571154569061, 1571154569061, 5, 'mod_custom_html', 'section1', '{}', 3, 't');
@@ -12676,38 +12676,38 @@ INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 12, 'mod_cu
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 13, 'mod_custom_html', 'header', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 14, 'mod_custom_html', 'article', '{}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 15, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 16, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 16, 'mod_custom_html', 'article', '{}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 17, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 18, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 18, 'mod_custom_html', 'article', '{}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 19, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 20, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 20, 'mod_custom_html', 'article', '{}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 21, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 22, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 22, 'mod_custom_html', 'article', '{}', 3, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 23, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 24, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 35, 'mod_custom_html', 'header', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 37, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 38, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 39, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 40, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 41, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 42, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 43, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 44, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 45, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 46, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 47, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 48, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 49, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 50, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 51, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 52, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 53, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 54, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 55, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 56, 'mod_custom_html', 'article', '{}', 1, 't');
 INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 57, 'mod_custom_html', 'header', '{}', 1, 't');
-INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 58, 'mod_custom_html', 'article', '{}', 1, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 58, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 24, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 38, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 40, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 42, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 44, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 46, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 48, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 50, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 52, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 54, 'mod_custom_html', 'article', '{}', 3, 't');
+INSERT INTO "public"."modules" VALUES (1571251343191, 1571251343191, 56, 'mod_custom_html', 'article', '{}', 3, 't');
 
 -- ----------------------------
 -- Table structure for modulestable
