@@ -13,6 +13,7 @@ module.exports = {
     },
   },
   fn: async function (inputs, exits) {
+
     let parsedSlides = '';
     let slides = await Slides.find({
       where: {
@@ -21,40 +22,35 @@ module.exports = {
       sort: 'id ASC'
     });
     for (const slide of slides) {
-      parsedSlides += '<li>' +
-        '<div style="height: 90vh" class="uk-background-cover" uk-img data-src="' + slide.image + '">' +
+      parsedSlides += '' +
+        '<li >' +
+        '<div>' +
+        '<img src="' + slide.image + '" alt="" uk-cover>' +
         '<div class="uk-position-cover uk-overlay-primary uk-text-center">' +
         '<div class="uk-position-bottom">' +
-        '<h1>' + slide.header +
-        '</h1>' +
-        '<p class="description">' + slide.description +
+        '<h1>Уселители 3G | 4G | GSM</h1>' +
+        '<p class="description">Дополнительная услуга для тех кому важна максимально качественная мобильная связь и 3G и 4G интернет. ' +
+        '<br>' +
+        'Наше оборудование, значительно улучшит уровень сигнала мобильного оператора, в вашей местности.' +
         '</p>' +
         '<p>' +
-        '<a href="' + slide.link + '" class="uk-button uk-button-danger">Перейти в раздел' +
-        '</a>' +
+        '<a href="/" class="uk-button uk-button-danger">Перейти в раздел</a>' +
         '</p>' +
         '</div>' +
         '</div>' +
         '</div>' +
         '</li>';
     }
+
+
     let body = '' +
-      '<div ' +
-      'id="mainslideshow" ' +
-      'class="uk-visible-toggle uk-light" ' +
-      'uk-slideshow="animation: push; autoplay: true; autoplay-interval: 5000; pause-on-hover: false;">' +
-      '<div class="uk-visible-toggle uk-light">' +
+      '<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 1920:1200; animation: push">' +
       '<ul class="uk-slideshow-items">' +
-      parsedSlides +
+      '' + parsedSlides +
       '</ul>' +
-      '</div>' +
-      '<ul style="z-index: 1; margin-top: -64px; padding: 0 10px; " class="uk-position-center-right uk-list">' +
-      '<li style="cursor: pointer" status="play" id="slideshow_switcher">' +
-      '<i style="font-size: 19px" class="far fa-pause-circle"></i>' +
-      '</li>' +
-      '</ul>' +
-      '<ul class="uk-slideshow-nav uk-dotnav uk-margin uk-position-center-right uk-display-block uk-padding-small">' +
-      '</ul>' +
+      '' +
+      '<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>' +
+      '<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>' +
       '</div>';
     return exits.success(body);
   }
