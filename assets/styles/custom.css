@@ -40,10 +40,6 @@
   padding: 40px 0;
 }
 
-#homepage-services-section img {
-  border: 1px solid #cccccc;
-}
-
 #homepage-services-section a {
   background-color: rgb(255, 197, 0);
   color: #70594a;
@@ -269,4 +265,10 @@ ul#sidebarmenu * {
   #homepage-services-section {
     padding: 20px 0;
   }
+}
+
+.aditional-info {
+  background: #e6e6e6;
+  padding: 15px;
+  border-left: 5px solid #ffc800;
 }

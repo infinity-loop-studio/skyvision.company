@@ -17,7 +17,8 @@ module.exports = {
     let parsedSlides = '';
     let slides = await Slides.find({
       where: {
-        moduleId: inputs.moduleId
+        moduleId: inputs.moduleId,
+        status: true
       },
       sort: 'id ASC'
     });
@@ -28,13 +29,10 @@ module.exports = {
         '<img src="' + slide.image + '" alt="" uk-cover>' +
         '<div class="uk-position-cover uk-overlay-primary uk-text-center">' +
         '<div class="uk-position-bottom">' +
-        '<h1>Уселители 3G | 4G | GSM</h1>' +
-        '<p class="description">Дополнительная услуга для тех кому важна максимально качественная мобильная связь и 3G и 4G интернет. ' +
-        '<br>' +
-        'Наше оборудование, значительно улучшит уровень сигнала мобильного оператора, в вашей местности.' +
-        '</p>' +
+        '<h1>' + slide.header + '</h1>' +
+        '<p class="description">' + slide.description + '</p>' +
         '<p>' +
-        '<a href="/" class="uk-button uk-button-danger">Перейти в раздел</a>' +
+        '<a href="' + slide.link + '" class="uk-button uk-button-danger">Перейти в раздел</a>' +
         '</p>' +
         '</div>' +
         '</div>' +
@@ -44,7 +42,7 @@ module.exports = {
 
 
     let body = '' +
-      '<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 1920:1200; animation: push">' +
+      '<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 1920:1200; animation: push; autoplay: true; autoplay-interval: 3000; pause-on-hover: false">' +
       '<ul class="uk-slideshow-items">' +
       '' + parsedSlides +
       '</ul>' +

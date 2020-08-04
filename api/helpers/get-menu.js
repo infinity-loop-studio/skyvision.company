@@ -36,6 +36,9 @@ module.exports = {
     menu = await Menu.findOne({
       systemName: inputs.moduleData.params.menuSystemName
     }).populate('items', {
+      where: {
+        status: true
+      },
       sort: 'sort ASC'
     });
 

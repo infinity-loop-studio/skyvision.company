@@ -20,6 +20,9 @@ module.exports = {
     },
     link: {
       type: 'string'
+    },
+    status: {
+      type: 'boolean'
     }
   }
 };
